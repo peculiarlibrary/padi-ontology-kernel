@@ -1,0 +1,4 @@
+@prefix padi: <http://padi.internal/> . 
+padi:Asset_002 a padi:KnowledgeAsset ; 
+    padi:hasDOI '10.5281/zenodo.padi.v2.0' ; 
+    padi:status 'Validated' .

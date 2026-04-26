@@ -1,1 +1,14 @@
-.venv/
+# Logs and runtime data
+*.log
+*.log.bak
+*.jsonl
+daemon.log
+
+# Quarantine and local assets
+quarantine/
+__pycache__/
+.env
+
+# OS specific
+.DS_Store
+Thumbs.db

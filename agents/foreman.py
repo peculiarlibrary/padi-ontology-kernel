@@ -1,25 +1,30 @@
-import time
 import os
+import time
+import sys
+# Ensure root is in path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from runtime.ledger import Ledger
 
 class Foreman:
-    """The PADI Foreman: Ensures repository health and structure."""
     def __init__(self):
         self.role = "Foreman"
-        self.workspace = "/c/padi-sovereign-bureau/padi-ontology-kernel"
+        self.base_dir = "C:/padi-sovereign-bureau/padi-ontology-kernel"
+        self.ledger = Ledger(os.path.join(self.base_dir, "daemon.log"))
+        self.required_dirs = ["data", "ontology", "constraints", "agents", "runtime"]
 
     def run_maintenance(self):
-        """Perform a routine structural check."""
         print(f"[{self.role}] Starting routine structure audit...")
-        # Simple health check: ensure essential folders exist
-        required_dirs = ['data', 'ontology', 'constraints']
-        for d in required_dirs:
-            if not os.path.exists(os.path.join(self.workspace, d)):
-                print(f"[{self.role}] ALERT: Missing directory {d}. Repairing...")
+        for d in self.required_dirs:
+            target = os.path.join(self.base_dir, d)
+            if not os.path.exists(target):
+                print(f"[{self.role}] ALERT: Missing {d}. Repairing...")
+                os.makedirs(target, exist_ok=True)
+        
+        self.ledger.record_transaction(self.role, "STRUCTURE_AUDIT", {"status": "verified"})
         print(f"[{self.role}] Audit complete. No anomalies detected.")
 
 if __name__ == "__main__":
-    foreman = Foreman()
-    # The Foreman works in a loop, reporting back to the Librarian
+    f = Foreman()
     while True:
-        foreman.run_maintenance()
-        time.sleep(300) # Maintenance interval
+        f.run_maintenance()
+        time.sleep(30) # Maintenance every 30 seconds

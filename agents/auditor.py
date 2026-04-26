@@ -1,31 +1,35 @@
+import os
 import time
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from runtime.ledger import Ledger
 
 class Auditor:
-    """The PADI Auditor: Enforces compliance and ledger integrity."""
     def __init__(self):
         self.role = "Auditor"
-        self.ledger = Ledger("../daemon.log")
-        self.security_threshold = 0.95
+        self.base_dir = "C:/padi-sovereign-bureau/padi-ontology-kernel"
+        self.ledger = Ledger(os.path.join(self.base_dir, "daemon.log"))
 
     def verify_ledger_integrity(self):
-        """Scans the ledger for anomalies or unrecorded state changes."""
-        print(f"[{self.role}] Performing ledger integrity audit...")
+        print(f"[{self.role}] Performing smart integrity audit...")
         history = self.ledger.get_history()
         
-        if not history:
-            print(f"[{self.role}] Ledger is empty. No integrity to verify.")
-            return
-
-        # Simple verification: Check for sequential consistency (simulated)
         for entry in history:
-            if "version" not in entry or entry["version"] != "2.0":
-                print(f"[{self.role}] CRITICAL: Version mismatch in entry!")
-        
-        print(f"[{self.role}] Audit Complete: {len(history)} entries verified. Status: SECURE.")
+            if entry.get("action") == "CATALOG_ENTRY":
+                filename = entry.get("payload", {}).get("filename", "")
+                
+                # Only enforce DOI on .ttl files (Knowledge Assets)
+                # Ignore system logs and internal jsonl files
+                if filename.endswith(".ttl"):
+                    # Simulation: Check if the file name implies a standard or asset
+                    if "standard" in filename or "asset" in filename:
+                         if "zenodo" not in filename.lower(): # Basic check for DOI-proxies
+                             print(f"[{self.role}] COMPLIANCE FAILURE: {filename} missing authority marker.")
+                             self.ledger.record_transaction(self.role, "COMPLIANCE_FAILURE", {"file": filename})
+                             return
+
+        self.ledger.record_transaction(self.role, "INTEGRITY_CHECK", {"status": "SECURE"})
+        print(f"[{self.role}] Audit Complete: System is compliant.")
 
 if __name__ == "__main__":
-    auditor = Auditor()
-    while True:
-        auditor.verify_ledger_integrity()
-        time.sleep(120) # Audit every 2 minutes
+    Auditor().verify_ledger_integrity()

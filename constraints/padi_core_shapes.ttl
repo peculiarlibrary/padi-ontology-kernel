@@ -1,0 +1,22 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix padi: <http://padi.internal/> .
+
+padi:KnowledgeAssetShape
+    a sh:NodeShape ;
+    sh:targetClass padi:KnowledgeAsset ;
+    sh:property [
+        sh:path padi:hasDOI ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Every KnowledgeAsset must have a registered DOI for sovereign persistence." ;
+    ] ;
+    sh:property [
+        sh:path padi:status ;
+        sh:in ( "Draft" "Validated" "Archived" ) ;
+        sh:minCount 1 ;
+    ] .
