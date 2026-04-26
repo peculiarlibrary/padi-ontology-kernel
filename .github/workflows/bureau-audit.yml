@@ -1,0 +1,26 @@
+name: PADI Bureau Integrity Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Sovereign Kernel
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Run Smart Auditor
+      run: |
+        # Injecting root into path so agents can find runtime
+        export PYTHONPATH=$PYTHONPATH:$(pwd)
+        python agents/auditor.py
