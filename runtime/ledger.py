@@ -1,32 +1,34 @@
-from datetime import datetime
-import uuid
 import json
+import datetime
+import os
 
+class Ledger:
+    def __init__(self, log_path="registry.log"):
+        self.log_path = log_path
+        # Ensure the log file exists in the root or specified path
+        if not os.path.exists(self.log_path):
+            with open(self.log_path, 'w') as f:
+                pass 
 
-class MutationLedger:
-
-    def __init__(self):
-        self.events = []
-
-    def record(self, operation, status="staged"):
-        event = {
-            "id": str(uuid.uuid4()),
-            "timestamp": datetime.utcnow().isoformat(),
-            "operation": operation,
-            "status": status
+    def record_transaction(self, agent_id, action, metadata):
+        """Appends a deterministic transaction to the PADI ledger."""
+        entry = {
+            "timestamp": datetime.datetime.utcnow().isoformat(),
+            "agent_id": agent_id,
+            "action": action,
+            "payload": metadata,
+            "version": "2.0"
         }
-        self.events.append(event)
-        return event
+        
+        with open(self.log_path, 'a') as f:
+            f.write(json.dumps(entry) + '\n')
+            
+        return True
 
-    def commit(self, event_id):
-        for e in self.events:
-            if e["id"] == event_id:
-                e["status"] = "committed"
-
-    def rollback(self, event_id):
-        for e in self.events:
-            if e["id"] == event_id:
-                e["status"] = "rolled_back"
-
-    def export(self):
-        return json.dumps(self.events, indent=2)
+    def get_history(self):
+        """Retrieves the full audit trail for the Bureau."""
+        history = []
+        with open(self.log_path, 'r') as f:
+            for line in f:
+                history.append(json.loads(line))
+        return history
