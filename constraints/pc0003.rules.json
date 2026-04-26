@@ -1,0 +1,10 @@
+{
+  "rule_id": "PC-0003",
+  "type": "governance_constraint",
+  "definition": {
+    "core_triple_limit": 16,
+    "require_signed_events": true,
+    "append_only": true,
+    "reject_on_invalid_state": true
+  }
+}

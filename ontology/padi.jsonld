@@ -1,0 +1,12 @@
+{
+    "@context": {
+        "depthIndex": "padi:depthIndex",
+        "nodeName": "padi:nodeName",
+        "padi": "https://padi-standard.org/ns/core#"
+    },
+    "@id": "http://example.org/node/CognitiveSystems",
+    "depthIndex": "4",
+    "nodeName": "Cognitive Systems",
+    "padi:hasJurisdiction": "GLOBAL",
+    "padi:lastValidated": "1777197959"
+}

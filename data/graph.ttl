@@ -1,0 +1,8 @@
+@prefix ns1: <https://padi-standard.org/ns/core#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/node/CognitiveSystems>
+    ns1:nodeName "Cognitive Systems" ;
+    ns1:depthIndex "4" ;
+    ns1:hasJurisdiction "GLOBAL" ;
+    ns1:lastValidated "1777197959" .

@@ -1,0 +1,12 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix padi: <https://padi-standard.org/ns/core#> .
+
+padi:NodeShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf padi:depthIndex ;
+
+    sh:property [
+        sh:path padi:hasJurisdiction ;
+        sh:minCount 1 ;
+        sh:message "Node must have a jurisdiction"
+    ] .

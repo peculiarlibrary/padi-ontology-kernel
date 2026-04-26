@@ -1,0 +1,86 @@
+[
+  {
+    "@id": "_:N06f2697a36a049a7ad9701390589b9a6",
+    "@type": [
+      "https://padi-standard.org/ns/core#TaxonomyManifest"
+    ],
+    "https://coderlegion.com/schema/v1#architect": [
+      {
+        "@value": "S. M. Gitandu, B.S."
+      }
+    ],
+    "https://coderlegion.com/schema/v1#nodeName": [
+      {
+        "@value": "The Peculiar Catalog"
+      }
+    ],
+    "https://padi-standard.org/ns/core#classificationStructure": [
+      {
+        "@id": "_:N4ca9b6b4c2b045a48816b134ff8f8b1d"
+      },
+      {
+        "@id": "_:N82b28c7b4be84d63bcd6521559ef676b"
+      },
+      {
+        "@id": "_:N6061b9c477de47e7bd7fb3e9069ca0e3"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4ca9b6b4c2b045a48816b134ff8f8b1d",
+    "https://padi-standard.org/ns/core#depthIndex": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ]
+  },
+  {
+    "@id": "_:N82b28c7b4be84d63bcd6521559ef676b",
+    "https://padi-standard.org/ns/core#depthIndex": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 2
+      }
+    ]
+  },
+  {
+    "@id": "_:N6061b9c477de47e7bd7fb3e9069ca0e3",
+    "https://padi-standard.org/ns/core#depthIndex": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 3
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/node1",
+    "https://coderlegion.com/schema/v1#nodeName": [
+      {
+        "@value": "Node A"
+      }
+    ],
+    "https://padi-standard.org/ns/core#depthIndex": [
+      {
+        "@value": "5"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/node/9edba151-095f-4f44-b832-5eb28f8ca298",
+    "https://coderlegion.com/schema/v1#nodeName": [
+      {
+        "@value": "Cognitive Systems"
+      }
+    ],
+    "https://padi-standard.org/ns/core#depthIndex": [
+      {
+        "@value": "4"
+      }
+    ]
+  }
+[
+  { existing nodes... },
+
+  { PC-0003 NODE HERE }
+]

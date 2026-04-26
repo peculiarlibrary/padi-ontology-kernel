@@ -1,0 +1,9 @@
+@prefix ex: <http://example.org/node/> .
+@prefix core: <https://padi-standard.org/ns/core#> .
+
+ex:CognitiveSystems a core:Domain ;
+    core:label "Cognitive Systems" .
+
+ex:LLMSystems a core:Concept ;
+    core:label "LLM-based Systems" ;
+    core:belongsTo ex:CognitiveSystems .

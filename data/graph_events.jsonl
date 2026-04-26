@@ -1,0 +1,6 @@
+{"type": "node", "data": {"id": "PC-0002", "label": "The Architecture of Causal Systems", "layer": "data"}, "ts": 1776931347.6397064}
+{"type": "edge", "data": {"from": "PC-0002", "to": "PC-0001", "type": "depends_on"}, "ts": 1776931357.030018}
+{"type": "node", "data": {"id": "PC-0001", "label": "The Architecture of Deterministic Systems", "layer": "execution"}, "ts": 1776931461.3152792}
+{"type": "node", "data": {"id": "PC-0003", "label": "Building Minimal Governance Layers", "layer": "control", "graph_role": "terminal", "state": "published", "truth_anchor": "DOI 10.5281/zenodo.18894084 (pending)", "triple_count": 16}, "ts": 1777011814.826969}
+{"type": "edge", "data": {"from": "PC-0003", "to": "PC-0002", "type": "depends_on"}, "ts": 1777011829.7908654}
+{"type": "edge", "data": {"from": "PC-0002", "to": "PC-0003", "type": "edges_to"}, "ts": 1777011843.5248406}

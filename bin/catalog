@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+BASE="$(cd "$(dirname "$0")/.." && pwd)"
+ARTIFACTS="$BASE/artifacts"
+REGISTRY="$BASE/registry.log"
+
+mkdir -p "$ARTIFACTS"
+touch "$REGISTRY"
+
+CMD="$1"
+ID="$2"
+TITLE="${*:3}"
+
+META="$ARTIFACTS/$ID/meta.json"
+
+case "$CMD" in
+
+  new)
+    if [ -z "$ID" ] || [ -z "$TITLE" ]; then
+      echo "ERROR: new <ID> <TITLE>"
+      exit 1
+    fi
+
+    mkdir -p "$ARTIFACTS/$ID"
+
+    cat > "$META" <<JSON
+{
+  "id": "$ID",
+  "title": "$TITLE",
+  "state": "draft",
+  "version": 1
+}
+JSON
+
+    echo "$ID | $TITLE" >> "$REGISTRY"
+    echo "Created: $ID"
+  ;;
+
+  review)
+    sed -i 's/"state": *"draft"/"state": "review"/' "$META"
+    echo "Reviewed: $ID"
+  ;;
+
+  approve)
+    sed -i 's/"state": *"review"/"state": "approved"/' "$META"
+    echo "Approved: $ID"
+  ;;
+
+  publish)
+    if [ ! -s "$META" ]; then
+      echo "ERROR: missing or empty meta.json"
+      exit 1
+    fi
+
+    sed -i 's/"state": *"approved"/"state": "published"/' "$META"
+
+    echo "$ID | published" >> "$REGISTRY"
+    echo "Published: $ID"
+  ;;
+
+  status)
+    cat "$META"
+  ;;
+
+  *)
+    echo "Commands: new | review | approve | publish | status"
+  ;;
+esac

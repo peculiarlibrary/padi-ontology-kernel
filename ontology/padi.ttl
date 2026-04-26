@@ -1,0 +1,99 @@
+@prefix padi: <http://padi.system/ontology#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#############################################
+# 🧠 CORE ONTOLOGY CLASSES
+#############################################
+
+padi:Entity a rdfs:Class ;
+    rdfs:label "Entity" ;
+    rdfs:comment "Base unit of all semantic objects in the PADI graph." .
+
+padi:Agent a rdfs:Class ;
+    rdfs:label "Agent" ;
+    rdfs:comment "Autonomous reasoning actor operating over the semantic graph." .
+
+padi:KnowledgeNode a rdfs:Class ;
+    rdfs:subClassOf padi:Entity ;
+    rdfs:label "Knowledge Node" ;
+    rdfs:comment "A node representing structured knowledge in the graph." .
+
+padi:Assertion a rdfs:Class ;
+    rdfs:subClassOf padi:KnowledgeNode ;
+    rdfs:label "Assertion" ;
+    rdfs:comment "A claim made about the graph, subject to validation and epistemic rules." .
+
+padi:Constraint a rdfs:Class ;
+    rdfs:label "Constraint" ;
+    rdfs:comment "A rule that governs validity of graph structure and relations." .
+
+#############################################
+# 🔗 RELATIONSHIP TYPES
+#############################################
+
+padi:relatesTo a rdf:Property ;
+    rdfs:label "relates to" ;
+    rdfs:comment "Generic semantic relationship between entities." .
+
+padi:dependsOn a rdf:Property ;
+    rdfs:label "depends on" ;
+    rdfs:comment "Indicates dependency between knowledge nodes or agents." .
+
+padi:validates a rdf:Property ;
+    rdfs:label "validates" ;
+    rdfs:comment "A constraint or agent validating a node or assertion." .
+
+padi:asserts a rdf:Property ;
+    rdfs:label "asserts" ;
+    rdfs:comment "Links an agent to an assertion it produces." .
+
+padi:derivedFrom a rdf:Property ;
+    rdfs:label "derived from" ;
+    rdfs:comment "Indicates logical or inferential origin of knowledge." .
+
+#############################################
+# 🤖 AGENT BEHAVIOR MODEL (STRUCTURAL ONLY)
+#############################################
+
+padi:Agent a rdfs:Class ;
+    rdfs:comment """
+Agents are constrained reasoning actors.
+They do not generate free-form knowledge.
+They operate only on graph state via:
+- SPARQL queries
+- validated assertions
+- SHACL-approved mutations
+""" .
+
+#############################################
+# 🧠 EPISTEMIC CATEGORIES (LIGHTWEIGHT MODEL)
+#############################################
+
+padi:ASSERTED a rdfs:Class ;
+    rdfs:label "Asserted Knowledge" .
+
+padi:DERIVED a rdfs:Class ;
+    rdfs:label "Derived Knowledge" .
+
+padi:INFERRED a rdfs:Class ;
+    rdfs:label "Inferred Knowledge" .
+
+padi:UNKNOWN a rdfs:Class ;
+    rdfs:label "Unknown State" .
+
+#############################################
+# 🧭 SYSTEM PRINCIPLE (ANNOTATION ONLY)
+#############################################
+
+padi:SystemPrinciple a rdfs:Class ;
+    rdfs:label "System Principle" ;
+    rdfs:comment """
+The PADI system enforces semantic interoperability through:
+1. RDF for structure
+2. SHACL for constraint validation
+3. SPARQL for controlled reasoning
+4. Epistemic rules for truth governance
+
+No agent may assert knowledge outside validated graph state.
+""" .

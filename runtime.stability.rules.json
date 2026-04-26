@@ -1,0 +1,142 @@
+{
+  "version": "1.0",
+  "mode": "STRICT_DETERMINISTIC_AUDIT",
+
+  "gates": {
+    "determinism": {
+      "pure_replay": {
+        "type": "idempotent_function_check",
+        "must_be_true": [
+          "same_ledger_same_output",
+          "no_randomness_sources",
+          "no_time_dependency_in_replay"
+        ]
+      },
+
+      "functional_isolation": {
+        "type": "side_effect_check",
+        "forbidden": [
+          "filesystem_write_during_replay",
+          "network_calls_during_replay",
+          "global_state_mutation"
+        ]
+      }
+    },
+
+    "schema_enforcement": {
+      "closed_registry": {
+        "type": "lookup_enforcement",
+        "rule": "all_predicates_must_exist_in_registry",
+        "on_violation": "FAIL_FAST"
+      },
+
+      "type_integrity": {
+        "allowed_classes": [
+          "SET_CONFLICT",
+          "TEMPORAL_MONOTONIC",
+          "OBSERVATIONAL_ONLY"
+        ],
+        "rule": "exactly_one_class_per_field",
+        "on_violation": "FAIL_FAST"
+      }
+    },
+
+    "contradiction_engine": {
+      "source_filter": {
+        "rule": "ONLY_SET_CONFLICT_FIELDS_ALLOWED",
+        "forbidden_sources": [
+          "TEMPORAL_MONOTONIC",
+          "OBSERVATIONAL_ONLY"
+        ]
+      },
+
+      "projection_only": {
+        "type": "pure_filter",
+        "forbidden_operations": [
+          "scoring",
+          "weighting",
+          "heuristic_ranking",
+          "inference"
+        ]
+      }
+    },
+
+    "canonical_resolution": {
+      "source_restriction": {
+        "rule": "canonical_from_SET_CONFLICT_only"
+      },
+
+      "deterministic_strategy": {
+        "required": true,
+        "mutable": false,
+        "examples_allowed": [
+          "last_write_wins",
+          "highest_weight_fixed_rule",
+          "lexicographic_stable_selection"
+        ]
+      }
+    },
+
+    "temporal_isolation": {
+      "append_only": {
+        "rule": "TEMPORAL_MONOTONIC_IS_APPEND_ONLY"
+      },
+
+      "non_participation": {
+        "forbidden_in": [
+          "canonical_resolution",
+          "contradiction_detection",
+          "graph_traversal"
+        ]
+      }
+    },
+
+    "replay_consistency": {
+      "ledger_immutability": {
+        "must_be_true": [
+          "no_mutation_of_input_ledger",
+          "ledger_is_stream_only"
+        ]
+      },
+
+      "idempotency": {
+        "type": "repeat_execution_check",
+        "must_be_true": [
+          "deterministic_output_across_runs"
+        ]
+      }
+    },
+
+    "output_integrity": {
+      "serialization_determinism": {
+        "must_be_true": [
+          "stable_key_ordering",
+          "no_environment_dependent_formatting"
+        ]
+      },
+
+      "status_enum": {
+        "allowed_values": [
+          "RESOLVED",
+          "RESOLVED_WITH_CONTRADICTIONS",
+          "REJECTED",
+          "QUARANTINED"
+        ]
+      }
+    },
+
+    "failure_policy": {
+      "strict_mode": {
+        "rule": "FAIL_FAST_ON_ANY_VIOLATION"
+      },
+
+      "auditability": {
+        "required_fields": [
+          "ledger_id",
+          "schema_classification_trace",
+          "resolution_path_hash"
+        ]
+      }
+    }
+  }
+}
