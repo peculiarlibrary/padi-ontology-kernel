@@ -1,35 +1,30 @@
 import os
-import time
 import sys
+# Path injection
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from runtime.ledger import Ledger
 
 class Auditor:
     def __init__(self):
         self.role = "Auditor"
-        self.base_dir = "C:/padi-sovereign-bureau/padi-ontology-kernel"
-        self.ledger = Ledger(os.path.join(self.base_dir, "daemon.log"))
+        self.base_dir = os.getcwd() # Use current directory for CI context
+        self.data_dir = os.path.join(self.base_dir, "data")
 
-    def verify_ledger_integrity(self):
-        print(f"[{self.role}] Performing smart integrity audit...")
-        history = self.ledger.get_history()
+    def verify_integrity(self):
+        print(f"[{self.role}] Performing smart integrity audit on repository...")
         
-        for entry in history:
-            if entry.get("action") == "CATALOG_ENTRY":
-                filename = entry.get("payload", {}).get("filename", "")
-                
-                # Only enforce DOI on .ttl files (Knowledge Assets)
-                # Ignore system logs and internal jsonl files
-                if filename.endswith(".ttl"):
-                    # Simulation: Check if the file name implies a standard or asset
-                    if "standard" in filename or "asset" in filename:
-                         if "zenodo" not in filename.lower(): # Basic check for DOI-proxies
-                             print(f"[{self.role}] COMPLIANCE FAILURE: {filename} missing authority marker.")
-                             self.ledger.record_transaction(self.role, "COMPLIANCE_FAILURE", {"file": filename})
-                             return
-
-        self.ledger.record_transaction(self.role, "INTEGRITY_CHECK", {"status": "SECURE"})
-        print(f"[{self.role}] Audit Complete: System is compliant.")
+        # In CI, we check the physical files in /data instead of the ledger
+        files = [f for f in os.listdir(self.data_dir) if f.endswith(".ttl")]
+        
+        for filename in files:
+            file_path = os.path.join(self.data_dir, filename)
+            with open(file_path, 'r') as f:
+                content = f.read()
+                if "padi:hasDOI" not in content and "zenodo" not in content.lower():
+                    print(f"[{self.role}] CRITICAL COMPLIANCE FAILURE: {filename} lacks a DOI.")
+                    sys.exit(1) # This stops the GitHub Action
+        
+        print(f"[{self.role}] Audit Complete: Repository is compliant.")
+        sys.exit(0)
 
 if __name__ == "__main__":
-    Auditor().verify_ledger_integrity()
+    Auditor().verify_integrity()
