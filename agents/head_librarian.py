@@ -1,49 +1,37 @@
-import time
-import json
 from runtime.ledger import Ledger
 from runtime.executor import Executor
+import time
 
 class HeadLibrarian:
     def __init__(self):
         self.persona = "Head Librarian"
         self.ledger = Ledger("../daemon.log")
         self.executor = Executor()
-        self.is_autonomous = True
-        self.junior_agents = {
-            "foreman": "execution-agent",
-            "cataloger": "ontology-agent",
-            "auditor": "compliance-agent"
-        }
+        self.active_agents = {}
 
-    def assign_role(self, task_type, payload):
-        """Delegates work to a specific junior agent."""
-        agent_role = self.junior_agents.get(task_type, "general-worker")
-        print(f"[DELEGATION] {self.persona} assigning {task_type} to {agent_role}...")
+    def deploy_foreman(self):
+        """Commands the Executor to spawn the Foreman agent."""
+        print(f"[{self.persona}] Deploying the Foreman for structural maintenance...")
         
-        self.ledger.record_transaction(
-            self.persona, 
-            "DELEGATE_TASK", 
-            {"target": agent_role, "task": task_type}
-        )
-        # Here the executor would spawn the actual sub-process
-        return True
+        # Point to the foreman script relative to the execution context
+        pid = self.executor.spawn_agent("Foreman", "agents/foreman.py")
+        
+        if pid:
+            self.active_agents["Foreman"] = pid
+            self.ledger.record_transaction(
+                self.persona, 
+                "SPAWN_AGENT", 
+                {"agent": "Foreman", "pid": pid, "status": "active"}
+            )
+            print(f"[{self.persona}] Foreman is live (PID: {pid}).")
+        return pid
 
-    def run_autonomous_loop(self):
-        """The 24/7 heart of the Library."""
-        print(f"--- {self.persona} is now managing the Bureau autonomously ---")
-        try:
-            while self.is_active:
-                # 1. Scan for new knowledge or system needs
-                # 2. Check health of junior agents
-                # 3. Re-balance system resources
-                time.sleep(60) # Heartbeat every minute
-        except KeyboardInterrupt:
-            print(f"Manual override detected. {self.persona} entering standby.")
-
-    def get_bureau_state(self):
+    def get_status(self):
+        """The 'Head Librarian' view of the entire Bureau."""
         history = self.ledger.get_history()
-        return f"Current State: {len(history)} total records. All agents reporting to HQ."
+        return f"Bureau Status: {len(history)} records. Active Agents: {list(self.active_agents.keys())}"
 
 if __name__ == "__main__":
     librarian = HeadLibrarian()
-    print(librarian.get_bureau_state())
+    librarian.deploy_foreman()
+    print(librarian.get_status())
