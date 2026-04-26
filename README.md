@@ -7,7 +7,7 @@ By utilizing **OWL 2** for ontology modeling and **SHACL** for structural constr
 
 ---
 
-## 🏛️ Core Components & Directory Map
+## Core Components & Directory Map
 
 | Folder | Content | Role |
 | :--- | :--- | :--- |
@@ -20,7 +20,7 @@ By utilizing **OWL 2** for ontology modeling and **SHACL** for structural constr
 
 ---
 
-## 🛠️ Technical Architecture
+## Technical Architecture
 
 ### 1. Deterministic Knowledge Graphs
 The PADI Kernel operates on a **Deterministic Truth Model**. Every node added to the graph is validated against the `ontology/padi.ttl` definitions.
@@ -36,7 +36,7 @@ This repository houses the logic for **A2A (Agent-to-Agent)** communication, all
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Environment Setup
 1. **Clone the Repo:** `git clone https://github.com/peculiarlibrary/padi-ontology-kernel.git`
@@ -46,11 +46,11 @@ This repository houses the logic for **A2A (Agent-to-Agent)** communication, all
    - `pip install -r requirements.lock`
 3. **Run Initial Bootstrap:** `./bootstrap.sh`
 
-## 🔗 The Three Pillars
+## The Three Pillars
 - **Narrative (Policy):** [PADI Standard Documentation](https://github.com/peculiarlibrary/padi-standard-documentation)
 - **Interface (Visual):** [PADI Web Visualizer](https://github.com/peculiarlibrary/padi-web-visualizer)
 
-## ⚖️ License
+## License
 Licensed under the **Apache License 2.0**.
 
 ---
