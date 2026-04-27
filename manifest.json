@@ -1,58 +1,100 @@
 {
-    "bureau_name": "PADI Sovereign Bureau",
-    "kernel_version": "4.0",
-    "assets": [
-        {
-            "type": "data",
-            "name": "graph.ttl"
-        },
-        {
-            "type": "data",
-            "name": "foreign_asset.ttl"
-        },
-        {
-            "type": "data",
-            "name": "ledger.jsonl"
-        },
-        {
-            "type": "data",
-            "name": "knowledge_seed_01.rdf"
-        },
-        {
-            "type": "data",
-            "name": "graph_events.jsonl"
-        },
-        {
-            "type": "data",
-            "name": "zenodo_v2_standard.ttl"
-        },
-        {
-            "type": "ontology",
-            "name": "identity-manifest.ttl"
-        },
-        {
-            "type": "ontology",
-            "name": "padi.ttl"
-        },
-        {
-            "type": "ontology",
-            "name": "projection-contract.jsonld.md"
-        },
-        {
-            "type": "ontology",
-            "name": "padi.jsonld"
-        },
-        {
-            "type": "constraints",
-            "name": "shapes.shacl"
-        },
-        {
-            "type": "constraints",
-            "name": "padi_core_shapes.ttl"
-        },
-        {
-            "type": "constraints",
-            "name": "pc0003.rules.json"
-        }
-    ]
+  "bureau_name": "PADI Sovereign Bureau",
+  "governing_architect": "Samuel Muriithi Gitandu, B.S.",
+  "kernel_version": "4.1.0",
+  "last_updated": "2026-04-27T10:22:09Z",
+  "zenodo_doi": "10.5281/zenodo.18894084",
+  "assets": [
+    {
+      "name": "foreign_asset.ttl",
+      "type": "data",
+      "path": "data\\foreign_asset.ttl",
+      "sha256": "e54f771f513413b314aec14a78bab70a624d9243d78c78655c87aeaff0f743b2",
+      "version": "1.0.0"
+    },
+    {
+      "name": "graph.ttl",
+      "type": "data",
+      "path": "data\\graph.ttl",
+      "sha256": "0d2ee4eab13048318706716b07e27dd4270ad0e84664d476c1024e87c1d06d28",
+      "version": "1.0.0"
+    },
+    {
+      "name": "graph_events.jsonl",
+      "type": "data",
+      "path": "data\\graph_events.jsonl",
+      "sha256": "4c01426f043c12280d8670198f065bf27476c17fe2ea3c8a4c30bbd6574e050f",
+      "version": "1.0.0"
+    },
+    {
+      "name": "knowledge_seed_01.rdf",
+      "type": "data",
+      "path": "data\\knowledge_seed_01.rdf",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ledger.jsonl",
+      "type": "data",
+      "path": "data\\ledger.jsonl",
+      "sha256": "eb622594680b9c76f70373ff506d466342a4d657b60067345878f0d8d69bb22d",
+      "version": "1.0.0"
+    },
+    {
+      "name": "zenodo_v2_standard.ttl",
+      "type": "data",
+      "path": "data\\zenodo_v2_standard.ttl",
+      "sha256": "8236a3cf13e3fbb7fa38f47bb33b08c195a48afe48e9175e9d900c0a4a50732f",
+      "version": "1.0.0"
+    },
+    {
+      "name": "identity-manifest.ttl",
+      "type": "ontology",
+      "path": "ontology\\identity-manifest.ttl",
+      "sha256": "ad922fd96bd87a67ee75caead1f6615e04341bd0bc002fe7797f1bcb05dc2618",
+      "version": "1.0.0"
+    },
+    {
+      "name": "padi.jsonld",
+      "type": "ontology",
+      "path": "ontology\\padi.jsonld",
+      "sha256": "12e4abf9376a99ec58032a5ee93f03579cdce8e7a381d78eed8d63cacacc9f87",
+      "version": "1.0.0"
+    },
+    {
+      "name": "padi.ttl",
+      "type": "ontology",
+      "path": "ontology\\padi.ttl",
+      "sha256": "f63f479befacc81d44d9ff2408f2d36945b5e0c433d0f5fc6996fefe5bd08cce",
+      "version": "1.0.0"
+    },
+    {
+      "name": "projection-contract.jsonld.md",
+      "type": "ontology",
+      "path": "ontology\\projection-contract.jsonld.md",
+      "sha256": "2aca2791cf7e212085a63a20ce53655ce0ab96d0467dfd914c7a21324c5501ce",
+      "version": "1.0.0"
+    },
+    {
+      "name": "padi_core_shapes.ttl",
+      "type": "constraints",
+      "path": "constraints\\padi_core_shapes.ttl",
+      "sha256": "015b9dfaa4884f074114eb371ead8396e364f8bc68b559edc27a8089f1e323ed",
+      "version": "1.0.0"
+    },
+    {
+      "name": "pc0003.rules.json",
+      "type": "constraints",
+      "path": "constraints\\pc0003.rules.json",
+      "sha256": "28bd44636dc8e12d9fc6690329a82a9e571b1edd5409dbb30ea01224d047ce91",
+      "version": "1.0.0"
+    },
+    {
+      "name": "shapes.shacl",
+      "type": "constraints",
+      "path": "constraints\\shapes.shacl",
+      "sha256": "d6ce55b3ecf410b82e3f6eb61f5d1e16e4b9ea436253c7fdd5276af3e8438454",
+      "version": "1.0.0"
+    }
+  ]
 }

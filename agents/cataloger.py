@@ -1,37 +1,43 @@
 import os
 import json
-import sys
-from runtime.ledger import Ledger
+import hashlib
+from datetime import datetime
 
-class Cataloger:
-    def __init__(self):
-        self.role = "Cataloger"
-        # Get root directory relative to this script
-        self.base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        self.ledger = Ledger()
+def calculate_sha256(filepath):
+    sha256_hash = hashlib.sha256()
+    with open(filepath, "rb") as f:
+        for byte_block in iter(lambda: f.read(4096), b""):
+            sha256_hash.update(byte_block)
+    return sha256_hash.hexdigest()
 
-    def update_manifest(self):
-        print(f"[{self.role}] Re-scanning Bureau assets...")
-        manifest = {
-            "bureau_name": "PADI Sovereign Bureau",
-            "kernel_version": "4.0",
-            "assets": []
-        }
-        
-        # Scan data and ontology directories
-        for folder in ["data", "ontology", "constraints"]:
-            path = os.path.join(self.base_dir, folder)
-            if os.path.exists(path):
-                files = os.listdir(path)
-                for f in files:
-                    manifest["assets"].append({"type": folder, "name": f})
-        
-        manifest_path = os.path.join(self.base_dir, "manifest.json")
-        with open(manifest_path, 'w') as f:
-            json.dump(manifest, f, indent=4)
-        
-        self.ledger.log_event(self.role, "Manifest updated successfully.")
-        print(f"[{self.role}] Manifest synchronized.")
+def generate_manifest():
+    manifest = {
+        "bureau_name": "PADI Sovereign Bureau",
+        "governing_architect": "Samuel Muriithi Gitandu, B.S.",
+        "kernel_version": "4.1.0",
+        "last_updated": datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
+        "zenodo_doi": "10.5281/zenodo.18894084",
+        "assets": []
+    }
+
+    directories = {"data": "data", "ontology": "ontology", "constraints": "constraints"}
+
+    for type_label, path in directories.items():
+        if os.path.exists(path):
+            for filename in os.listdir(path):
+                f_path = os.path.join(path, filename)
+                if os.path.isfile(f_path):
+                    manifest["assets"].append({
+                        "name": filename,
+                        "type": type_label,
+                        "path": f_path,
+                        "sha256": calculate_sha256(f_path),
+                        "version": "1.0.0"
+                    })
+
+    with open("manifest.json", "w") as f:
+        json.dump(manifest, f, indent=2)
+    print(f"[Cataloger] Manifest sealed with SHA-256 fingerprints.")
 
 if __name__ == "__main__":
-    Cataloger().update_manifest()
+    generate_manifest()
