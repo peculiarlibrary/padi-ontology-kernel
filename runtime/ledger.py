@@ -1,33 +1,23 @@
-import json
-import datetime
 import os
 
 class Ledger:
-    """The PADI Sovereign Ledger: An append-only registry for auditability."""
-    def __init__(self, log_path="../daemon.log"):
-        self.log_path = log_path
+    def __init__(self, log_path=None):
+        # Dynamically find the project root regardless of OS
+        self.base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        
+        if log_path:
+            self.log_path = log_path
+        else:
+            self.log_path = os.path.join(self.base_dir, "daemon.log")
+            
+        self._initialize_log()
+
+    def _initialize_log(self):
+        # Create the log if it doesn't exist
         if not os.path.exists(self.log_path):
             with open(self.log_path, 'w') as f:
-                pass 
+                f.write("--- PADI Bureau Ledger Initialized ---\n")
 
-    def record_transaction(self, agent_id, action, metadata):
-        """Appends a deterministic transaction to the PADI registry."""
-        entry = {
-            "timestamp": datetime.datetime.utcnow().isoformat(),
-            "agent_id": agent_id,
-            "action": action,
-            "payload": metadata,
-            "version": "2.0"
-        }
-        
+    def log_event(self, agent, message):
         with open(self.log_path, 'a') as f:
-            f.write(json.dumps(entry) + '\n')
-            
-        return True
-
-    def get_history(self):
-        """Retrieves the full audit trail for the Bureau."""
-        if not os.path.exists(self.log_path):
-            return []
-        with open(self.log_path, 'r') as f:
-            return [json.loads(line) for line in f]
+            f.write(f"[{agent}] {message}\n")
