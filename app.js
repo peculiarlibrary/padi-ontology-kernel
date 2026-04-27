@@ -1,8 +1,6 @@
 async function initializeBureau() {
     const assetList = document.getElementById('asset-list');
     const passportData = document.getElementById('passport-data');
-    
-    // Helper to handle relative paths on GitHub Pages
     const getPath = (file) => window.location.pathname.endsWith('/') ? file : `./${file}`;
 
     try {
@@ -11,34 +9,36 @@ async function initializeBureau() {
             fetch(getPath('broadcast.jsonld'))
         ]);
 
-        if (!manifestRes.ok || !broadcastRes.ok) throw new Error("Kernel files missing");
+        if (!manifestRes.ok || !broadcastRes.ok) throw new Error("Kernel Handshake Failed");
 
         const manifest = await manifestRes.json();
         const broadcast = await broadcastRes.json();
         
+        // Render Identity & Signal Time
         passportData.innerHTML = `
             <div class="identity-grid">
-                <p><strong>Authority:</strong> Samuel Muriithi Gitandu</p>
-                <p><strong>Title:</strong> The Peculiar Librarian</p>
+                <p><strong>Authority:</strong> ${manifest.governing_architect}</p>
+                <p><strong>Bureau Version:</strong> v${manifest.kernel_version}</p>
                 <p><strong>Last Signal:</strong> ${new Date(broadcast.latest_update).toLocaleString()}</p>
-                <p><strong>DOI:</strong> ${manifest.zenodo_doi || "10.5281/zenodo.18894084"}</p>
+                <p><strong>DOI:</strong> ${manifest.zenodo_doi}</p>
             </div>
         `;
 
+        // Render Sealed Assets
         assetList.innerHTML = manifest.assets.map(asset => 
-            `<li class="asset-item"><strong>[${asset.type.toUpperCase()}]</strong> ${asset.name}</li>`
+            `<li class="asset-item" style="margin-bottom: 15px;">
+                <strong>[${asset.type.toUpperCase()}]</strong> ${asset.name}
+                <br><code style="font-size: 0.75em; color: #238636; background: #0d1117; padding: 2px 5px; border-radius: 4px;">
+                    SHA256: ${asset.sha256.substring(0, 24)}...
+                </code>
+             </li>`
         ).join('');
 
         document.getElementById('status-badge').innerText = "Status: Online & Fortified";
 
     } catch (error) {
-        console.warn("Handshake delay, retrying with manifest only...");
-        // Fallback: Try to at least show the identity if broadcast fails
-        passportData.innerHTML = `
-            <p><strong>Architect:</strong> Samuel M. Gitandu</p>
-            <p><strong>Status:</strong> Handshake Pending...</p>
-            <p style="font-size: 0.8em; color: #8b949e;">Check GitHub Actions to ensure files are generated.</p>
-        `;
+        console.warn("Handshake Error:", error);
+        passportData.innerHTML = "<p style='color: #f85149;'>Handshake Pending: Awaiting A2A Signal.</p>";
     }
 }
 
