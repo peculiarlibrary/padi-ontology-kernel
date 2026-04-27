@@ -1,0 +1,3 @@
+@prefix ex: <http://example.org/> .
+ex:UnverifiedData a ex:SecretAsset ;
+    ex:content "This data has no DOI and should be rejected." .
