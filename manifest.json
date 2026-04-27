@@ -1,119 +1,119 @@
 {
     "assets": [
         {
-            "path": "README.md",
+            "name": "README.md",
             "sha256": "91c38850a7bbdcd377452f2eacfc34f9fde3560dc5ea45671980a6f83b3ffd7e"
         },
         {
-            "path": "runtime.stability.rules.json",
+            "name": "runtime.stability.rules.json",
             "sha256": "b5ca82fcc6e4ff074c5c78329a24bbf8f136f624f564bdc0bbf6dd3e8042ee8a"
         },
         {
-            "path": "archive/research-notes/research_note_001.md",
+            "name": "archive/research-notes/research_note_001.md",
             "sha256": "fd79989866303435b96ab5a7a07d4e951f653f23778ecfadbd1642e5a84c5e26"
         },
         {
-            "path": "archive/research-notes/research_note_002.md",
+            "name": "archive/research-notes/research_note_002.md",
             "sha256": "fc919488c23c73fbba36929c658e8641228e3ae30c294f161be10eef19d53a22"
         },
         {
-            "path": "bureau-starter/data/taxonomy.ttl",
+            "name": "bureau-starter/data/taxonomy.ttl",
             "sha256": "e38f22791f8a4001700187432f98b10d351568b84a460a94f14a93d6cf38e31e"
         },
         {
-            "path": "bureau-starter/shapes/taxonomy.shacl.ttl",
+            "name": "bureau-starter/shapes/taxonomy.shacl.ttl",
             "sha256": "7abeade5ba725b73fd23b5bab925c7e76991397102c836169b047fbe31d2082b"
         },
         {
-            "path": "constraints/padi_core_shapes.ttl",
+            "name": "constraints/padi_core_shapes.ttl",
             "sha256": "015b9dfaa4884f074114eb371ead8396e364f8bc68b559edc27a8089f1e323ed"
         },
         {
-            "path": "constraints/pc0003.rules.json",
+            "name": "constraints/pc0003.rules.json",
             "sha256": "28bd44636dc8e12d9fc6690329a82a9e571b1edd5409dbb30ea01224d047ce91"
         },
         {
-            "path": "constraints/shapes.shacl",
+            "name": "constraints/shapes.shacl",
             "sha256": "de344280a559cb9e608c5015805a11adfd4078cd5f1f3211a8e10a38adb867b5"
         },
         {
-            "path": "data/foreign_asset.ttl",
+            "name": "data/foreign_asset.ttl",
             "sha256": "da01ab01d4e88690cee3d642033b596ed0b63b672b627e563ae904f7472f5df0"
         },
         {
-            "path": "data/graph.ttl",
+            "name": "data/graph.ttl",
             "sha256": "0d2ee4eab13048318706716b07e27dd4270ad0e84664d476c1024e87c1d06d28"
         },
         {
-            "path": "data/graph_events.jsonl",
+            "name": "data/graph_events.jsonl",
             "sha256": "5ad0c252715be35e228cfd60393ac340391a7b112aa769953d246104ba9f1759"
         },
         {
-            "path": "data/knowledge_seed_01.rdf",
+            "name": "data/knowledge_seed_01.rdf",
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
         {
-            "path": "data/ledger.jsonl",
+            "name": "data/ledger.jsonl",
             "sha256": "5b2896121afbf09eefa5eaa02159a63082164d8873713fd8e869f9c51c7c2907"
         },
         {
-            "path": "data/zenodo_v2_standard.ttl",
+            "name": "data/zenodo_v2_standard.ttl",
             "sha256": "8236a3cf13e3fbb7fa38f47bb33b08c195a48afe48e9175e9d900c0a4a50732f"
         },
         {
-            "path": "epistemics/assertion-model.md",
+            "name": "epistemics/assertion-model.md",
             "sha256": "76b6fa229684b87fc89b3c7780aef2832218827b364b351721f2437a97d385f9"
         },
         {
-            "path": "epistemics/contract.md",
+            "name": "epistemics/contract.md",
             "sha256": "1404c136049264b4d4535c73b31ecb15eb2d8d5a86ccdba571c4557980905ae2"
         },
         {
-            "path": "governance/agent-orchestration.md",
+            "name": "governance/agent-orchestration.md",
             "sha256": "f6c4235c7c1ee2295e6eec633508870fa4b11965a12807120995dfaf67509ebc"
         },
         {
-            "path": "governance/consistency-check.md",
+            "name": "governance/consistency-check.md",
             "sha256": "202e166859b34915169830d2ba447b5ab26b2cdb608038e6a769d93aaa973f7b"
         },
         {
-            "path": "governance/execution-pipeline.md",
+            "name": "governance/execution-pipeline.md",
             "sha256": "2eda92b41b4d407bf081e320a6a8299c8e1bd1f52fa8f5db953bb6a061e24f65"
         },
         {
-            "path": "governance/kernel-binding.md",
+            "name": "governance/kernel-binding.md",
             "sha256": "fb9bcba2b40596c8a0d01f2ef7080b45488e6a38cfa2351968eb588e81ad8b38"
         },
         {
-            "path": "governance/rules.md",
+            "name": "governance/rules.md",
             "sha256": "da6dc788fbad2f642db7ea6258b8b1f262c25222d813b74916bda8f8e57fa9ce"
         },
         {
-            "path": "ontology/identity-manifest.ttl",
+            "name": "ontology/identity-manifest.ttl",
             "sha256": "ad922fd96bd87a67ee75caead1f6615e04341bd0bc002fe7797f1bcb05dc2618"
         },
         {
-            "path": "ontology/padi.ttl",
+            "name": "ontology/padi.ttl",
             "sha256": "637f4e75093e28d46d6d58cd98c28c90bd997a9a9eaceb01c817fbfe2d64149e"
         },
         {
-            "path": "ontology/padi_taxonomy_v1.ttl",
+            "name": "ontology/padi_taxonomy_v1.ttl",
             "sha256": "713911644c2a847a5a0db3ead826fb7471b3920c79d472d89235927ef7ba7d3c"
         },
         {
-            "path": "ontology/projection-contract.jsonld.md",
+            "name": "ontology/projection-contract.jsonld.md",
             "sha256": "87b8da37358febd8683a14a5e3e220cb123fd6ee947191d55b99b37f173c5592"
         },
         {
-            "path": "quarantine/rogue_asset.ttl",
+            "name": "quarantine/rogue_asset.ttl",
             "sha256": "6dc93affef8a3349380e8156e443e18d6628de14d27684ccfaa13b0f77c9d1a6"
         },
         {
-            "path": "queries/sparql-library.md",
+            "name": "queries/sparql-library.md",
             "sha256": "0f7b7fc2cf7d1a9094635178420dff65e155481a898a21b19f3c011083bd548a"
         },
         {
-            "path": "runtime/agent-execution-runtime.md",
+            "name": "runtime/agent-execution-runtime.md",
             "sha256": "048ec1e1ba8fa525b96c776eedc08b33f255743cb6bef589675917c11e1d007d"
         }
     ]
