@@ -1,0 +1,37 @@
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 40px;
+}
+
+header {
+    border-bottom: 2px solid #238636;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+h1 { color: #58a6ff; }
+h2 { color: #238636; border-left: 4px solid #238636; padding-left: 10px; }
+
+section {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #30363d;
+}
+
+#status-badge {
+    background: #238636;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    display: inline-block;
+}
+
+ul { list-style-type: "↳ "; }
+li { margin: 10px 0; color: #8b949e; }
+strong { color: #f0f6fc; }
