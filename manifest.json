@@ -24,6 +24,10 @@
         },
         {
             "type": "ontology",
+            "name": "identity-manifest.ttl"
+        },
+        {
+            "type": "ontology",
             "name": "padi.ttl"
         },
         {
