@@ -62,7 +62,7 @@ pydantic_core==2.46.1
 pydeck==0.9.2
 PyNaCl==1.6.2
 pyparsing==3.3.2
-pyshacl==0.23.0
+pyshacl==0.31.0
 python-dateutil==2.9.0.post0
 python-discovery==1.2.2
 python-dotenv==1.0.1
