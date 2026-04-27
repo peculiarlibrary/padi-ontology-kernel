@@ -1,18 +1,19 @@
 import requests
 import hashlib
 import os
-import json
 
-def get_local_hash(filepath):
+def get_normalized_hash(filepath):
     sha256_hash = hashlib.sha256()
     with open(filepath, "rb") as f:
-        for byte_block in iter(lambda: f.read(4096), b""):
-            sha256_hash.update(byte_block)
+        content = f.read()
+        # Normalize: replace Windows CRLF (\r\n) with Linux LF (\n)
+        normalized_content = content.replace(b"\r\n", b"\n")
+        sha256_hash.update(normalized_content)
     return sha256_hash.hexdigest()
 
 def perform_audit():
     manifest_url = "https://peculiarlibrary.github.io/padi-ontology-kernel/manifest.json"
-    print(f"[Sentinel] Fetching remote Truth from Embassy...")
+    print(f"[Sentinel] Performing Normalized Integrity Audit...")
     
     try:
         remote_manifest = requests.get(manifest_url).json()
@@ -21,24 +22,23 @@ def perform_audit():
         for asset in remote_manifest['assets']:
             local_path = asset['path']
             if os.path.exists(local_path):
-                local_hash = get_local_hash(local_path)
+                # Use the normalized hash to account for Windows/Linux differences
+                local_hash = get_normalized_hash(local_path)
                 if local_hash == asset['sha256']:
-                    print(f"[OK] {asset['name']} matches Embassy seal.")
+                    print(f"[OK] {asset['name']} verified.")
                 else:
-                    print(f"[ALERT] {asset['name']} CORRUPTION DETECTED!")
-                    print(f"      Local: {local_hash[:16]}")
-                    print(f"      Remote: {asset['sha256'][:16]}")
+                    print(f"[ALERT] {asset['name']} HASH MISMATCH!")
                     violations += 1
             else:
-                print(f"[WARNING] {asset['name']} missing from local Kernel.")
+                print(f"[WARNING] {asset['name']} missing locally.")
 
         if violations == 0:
-            print("\n[Sentinel] Audit Complete: Structural Integrity 100% Verified.")
+            print("\n[Sentinel] Equilibrium Reached: 100% Verified.")
         else:
-            print(f"\n[Sentinel] CRITICAL: {violations} integrity violations found.")
+            print(f"\n[Sentinel] Found {violations} discrepancies.")
 
     except Exception as e:
-        print(f"[Sentinel] Audit Failed: {e}")
+        print(f"[Sentinel] Error: {e}")
 
 if __name__ == "__main__":
     perform_audit()
