@@ -1,3 +1,5 @@
-@prefix ex: <http://example.org/> .
-ex:UnverifiedData a ex:SecretAsset ;
-    ex:content "This data has no DOI and should be rejected." .
+@prefix padi: <https://padi.standards.org/schema#> .
+<https://doi.org/10.5281/zenodo.18894084#foreign-asset>
+    a padi:ValidatedData ;
+    padi:status "Authorized" ;
+    padi:hasDOI "10.5281/zenodo.18894084" .
