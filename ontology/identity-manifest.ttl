@@ -1,0 +1,19 @@
+@prefix padi: <https://padi.standards.org/schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://github.com/peculiarlibrary/padi-ontology-kernel>
+    a padi:SovereignBureau ;
+    padi:name "PADI Sovereign Bureau Kernel" ;
+    padi:governingArchitect "Samuel Muriithi Gitandu, B.S." ;
+    padi:officialTitle "The Peculiar Librarian" ;
+    padi:version "4.0.0" ;
+    padi:zenodoDOI "10.5281/zenodo.18894084" ;
+    padi:status "Fortified" ;
+    padi:established "2026-04-27"^^xsd:date ;
+    padi:serviceEndpoints [
+        padi:audit "/.github/workflows/bureau-audit.yml" ;
+        padi:catalog "/manifest.json" ;
+        padi:schema "/ontology/zenodo_v2_standard.ttl"
+    ] ;
+    rdfs:comment "The primary execution engine for the PADI Technical Standard." .
