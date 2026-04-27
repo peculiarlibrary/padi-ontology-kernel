@@ -1,27 +1,30 @@
 import requests
 import json
+import time
 
-# The entry point for discovery is your live Embassy URL
 BROADCAST_URL = "https://peculiarlibrary.github.io/padi-ontology-kernel/broadcast.jsonld"
 
 def discover_bureau():
     print(f"[Scout] Initiating discovery at {BROADCAST_URL}...")
     
     try:
-        # 1. Fetch the Broadcast Signal
         response = requests.get(BROADCAST_URL)
-        response.raise_for_status()
+        
+        # Check if the Embassy is returning empty content (deployment lag)
+        if not response.text.strip():
+            print("[Scout] Embassy Signal is currently empty. Retrying in 5s...")
+            time.sleep(5)
+            response = requests.get(BROADCAST_URL)
+
         signal = response.json()
+        print(f"[Scout] Signal Found! Authority: {signal.get('authority', 'Unknown')}")
         
-        print(f"[Scout] Signal Found! Authority: {signal['authority']}")
-        
-        # 2. Locate the Manifest through the signal
-        manifest_url = "https://peculiarlibrary.github.io/padi-ontology-kernel/" + signal['endpoints']['manifest']
+        # Correctly resolve the manifest URL
+        manifest_url = "https://peculiarlibrary.github.io/padi-ontology-kernel/manifest.json"
         manifest_data = requests.get(manifest_url).json()
         
         print(f"[Scout] Manifest verified. Assets discovered: {len(manifest_data['assets'])}")
         
-        # 3. List the Immutable Seals
         for asset in manifest_data['assets']:
             print(f"  - Verified [{asset['type'].upper()}]: {asset['name']} (Seal: {asset['sha256'][:16]})")
 
