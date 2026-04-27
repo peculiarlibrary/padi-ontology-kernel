@@ -1,0 +1,14 @@
+{
+  "@context": "https://padi.standards.org/context.jsonld",
+  "@id": "https://peculiarlibrary.github.io/padi-ontology-kernel/broadcast.jsonld",
+  "@type": "padi:BroadcastSignal",
+  "bureau": "https://github.com/peculiarlibrary/padi-ontology-kernel",
+  "status": "active",
+  "latest_update": "2026-04-27T09:44:59Z",
+  "endpoints": {
+    "manifest": "./manifest.json",
+    "identity": "./ontology/identity-manifest.ttl",
+    "shacl": "./constraints/zenodo_v2_standard.shacl"
+  },
+  "authority": "Samuel Muriithi Gitandu, B.S."
+}
