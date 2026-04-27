@@ -1,5 +1,9 @@
 @prefix padi: <https://padi.standards.org/schema#> .
-<https://doi.org/10.5281/zenodo.18894084#foreign-asset>
-    a padi:ValidatedData ;
-    padi:status "Authorized" ;
-    padi:hasDOI "10.5281/zenodo.18894084" .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+<https://peculiarlibrary.github.io/padi-ontology-kernel/data/foreign_asset.ttl>
+    a padi:SovereignAsset ;
+    dc:identifier "doi:10.5281/zenodo.18894084" ;
+    dc:creator "Samuel Muriithi Gitandu, B.S." ;
+    padi:complianceStatus "Verified" ;
+    padi:integritySeal "SHA256-Validated" .
