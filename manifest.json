@@ -2,7 +2,7 @@
   "bureau_name": "PADI Sovereign Bureau",
   "governing_architect": "Samuel Muriithi Gitandu, B.S.",
   "kernel_version": "4.1.0",
-  "last_updated": "2026-04-27T11:07:03Z",
+  "last_updated": "2026-04-27T11:37:16Z",
   "zenodo_doi": "10.5281/zenodo.18894084",
   "assets": [
     {
@@ -16,7 +16,7 @@
       "name": "foreign_asset.ttl",
       "type": "data",
       "path": "data/foreign_asset.ttl",
-      "sha256": "e53f29b7744a12e1fe769143016508b9e93038dc67e27c1ccc7c8a8a83ad80b4",
+      "sha256": "da01ab01d4e88690cee3d642033b596ed0b63b672b627e563ae904f7472f5df0",
       "version": "1.0.0"
     },
     {
