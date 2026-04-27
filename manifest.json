@@ -1,107 +1,42 @@
 {
-  "bureau_name": "PADI Sovereign Bureau",
-  "governing_architect": "Samuel Muriithi Gitandu, B.S.",
-  "kernel_version": "4.1.0",
-  "last_updated": "2026-04-27T18:34:35Z",
-  "zenodo_doi": "10.5281/zenodo.18894084",
-  "assets": [
-    {
-      "name": "graph.ttl",
-      "type": "data",
-      "path": "data/graph.ttl",
-      "sha256": "0d2ee4eab13048318706716b07e27dd4270ad0e84664d476c1024e87c1d06d28",
-      "version": "1.0.0"
-    },
-    {
-      "name": "foreign_asset.ttl",
-      "type": "data",
-      "path": "data/foreign_asset.ttl",
-      "sha256": "da01ab01d4e88690cee3d642033b596ed0b63b672b627e563ae904f7472f5df0",
-      "version": "1.0.0"
-    },
-    {
-      "name": "ledger.jsonl",
-      "type": "data",
-      "path": "data/ledger.jsonl",
-      "sha256": "5b2896121afbf09eefa5eaa02159a63082164d8873713fd8e869f9c51c7c2907",
-      "version": "1.0.0"
-    },
-    {
-      "name": "knowledge_seed_01.rdf",
-      "type": "data",
-      "path": "data/knowledge_seed_01.rdf",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "version": "1.0.0"
-    },
-    {
-      "name": "graph_events.jsonl",
-      "type": "data",
-      "path": "data/graph_events.jsonl",
-      "sha256": "5ad0c252715be35e228cfd60393ac340391a7b112aa769953d246104ba9f1759",
-      "version": "1.0.0"
-    },
-    {
-      "name": "zenodo_v2_standard.ttl",
-      "type": "data",
-      "path": "data/zenodo_v2_standard.ttl",
-      "sha256": "8236a3cf13e3fbb7fa38f47bb33b08c195a48afe48e9175e9d900c0a4a50732f",
-      "version": "1.0.0"
-    },
-    {
-      "name": "identity-manifest.ttl",
-      "type": "ontology",
-      "path": "ontology/identity-manifest.ttl",
-      "sha256": "ad922fd96bd87a67ee75caead1f6615e04341bd0bc002fe7797f1bcb05dc2618",
-      "version": "1.0.0"
-    },
-    {
-      "name": "padi_taxonomy_v1.ttl",
-      "type": "ontology",
-      "path": "ontology/padi_taxonomy_v1.ttl",
-      "sha256": "713911644c2a847a5a0db3ead826fb7471b3920c79d472d89235927ef7ba7d3c",
-      "version": "1.0.0"
-    },
-    {
-      "name": "padi.ttl",
-      "type": "ontology",
-      "path": "ontology/padi.ttl",
-      "sha256": "637f4e75093e28d46d6d58cd98c28c90bd997a9a9eaceb01c817fbfe2d64149e",
-      "version": "1.0.0"
-    },
-    {
-      "name": "projection-contract.jsonld.md",
-      "type": "ontology",
-      "path": "ontology/projection-contract.jsonld.md",
-      "sha256": "87b8da37358febd8683a14a5e3e220cb123fd6ee947191d55b99b37f173c5592",
-      "version": "1.0.0"
-    },
-    {
-      "name": "padi.jsonld",
-      "type": "ontology",
-      "path": "ontology/padi.jsonld",
-      "sha256": "0159917989d4e7863c89bab8b539f8a5b42934779811da4c4d7ab127c7cb3943",
-      "version": "1.0.0"
-    },
-    {
-      "name": "shapes.shacl",
-      "type": "constraints",
-      "path": "constraints/shapes.shacl",
-      "sha256": "de344280a559cb9e608c5015805a11adfd4078cd5f1f3211a8e10a38adb867b5",
-      "version": "1.0.0"
-    },
-    {
-      "name": "padi_core_shapes.ttl",
-      "type": "constraints",
-      "path": "constraints/padi_core_shapes.ttl",
-      "sha256": "015b9dfaa4884f074114eb371ead8396e364f8bc68b559edc27a8089f1e323ed",
-      "version": "1.0.0"
-    },
-    {
-      "name": "pc0003.rules.json",
-      "type": "constraints",
-      "path": "constraints/pc0003.rules.json",
-      "sha256": "28bd44636dc8e12d9fc6690329a82a9e571b1edd5409dbb30ea01224d047ce91",
-      "version": "1.0.0"
-    }
-  ]
+    "manifest.json": "172adba2269e7d3cb165bc25806be34310ee34fa15f2f422b0a8cac0f20b5d31",
+    "README.md": "91c38850a7bbdcd377452f2eacfc34f9fde3560dc5ea45671980a6f83b3ffd7e",
+    "runtime.stability.rules.json": "b5ca82fcc6e4ff074c5c78329a24bbf8f136f624f564bdc0bbf6dd3e8042ee8a",
+    ".venv/Lib/site-packages/pip/_vendor/idna/LICENSE.md": "b7a336abf3b04e180ec065cdd16e705d079e1cc7a14f910aa6e9187f36b9cd87",
+    ".venv/Lib/site-packages/pip-26.0.1.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md": "b7a336abf3b04e180ec065cdd16e705d079e1cc7a14f910aa6e9187f36b9cd87",
+    ".venv/Lib/site-packages/pyparsing/ai/best_practices.md": "aa53ca4e679311869a005446930477133ba43fe4de2052f3a18389ce85417086",
+    ".venv/Lib/site-packages/pyshacl/assets/dash.ttl": "02ff6d62407f021395a9fb5087366bafa4ddbaea816896b91333a62fc5e9f153",
+    ".venv/Lib/site-packages/pyshacl/assets/schema.ttl": "048bda6077cfbdbf136ce608571d2bb42228edfe34d6fb2209d7f9c6cf369d75",
+    ".venv/Lib/site-packages/pyshacl/assets/shacl-shacl.ttl": "41275ece0f2d8afd3475a299ee83488b72ba581d270d791711011faa4e29d84e",
+    ".venv/Lib/site-packages/pyshacl/assets/shacl.ttl": "e030660d62603a769c2bf222b9bfbf44bed670f0e5682c46a454e59c6593bca9",
+    ".venv/Lib/site-packages/setuptools/config/distutils.schema.json": "4dca77da44678703911b0ffda7a1848b4f258f6875e6d411cce6016f31a67015",
+    ".venv/Lib/site-packages/setuptools/config/setuptools.schema.json": "069ead4f046f4b2f7afdd09de4ea8a4e27ee21c4d639de700c6442af0601ce34",
+    "agents/agent-spec.md": "e4906e0a9d9b5492f4acb76fb7bcde80c6a472e9fd6bd2d9e337633671d834f8",
+    "archive/research-notes/research_note_001.md": "fd79989866303435b96ab5a7a07d4e951f653f23778ecfadbd1642e5a84c5e26",
+    "archive/research-notes/research_note_002.md": "fc919488c23c73fbba36929c658e8641228e3ae30c294f161be10eef19d53a22",
+    "bureau-starter/data/taxonomy.ttl": "e38f22791f8a4001700187432f98b10d351568b84a460a94f14a93d6cf38e31e",
+    "bureau-starter/shapes/taxonomy.shacl.ttl": "7abeade5ba725b73fd23b5bab925c7e76991397102c836169b047fbe31d2082b",
+    "constraints/padi_core_shapes.ttl": "015b9dfaa4884f074114eb371ead8396e364f8bc68b559edc27a8089f1e323ed",
+    "constraints/pc0003.rules.json": "28bd44636dc8e12d9fc6690329a82a9e571b1edd5409dbb30ea01224d047ce91",
+    "constraints/shapes.shacl": "de344280a559cb9e608c5015805a11adfd4078cd5f1f3211a8e10a38adb867b5",
+    "data/foreign_asset.ttl": "da01ab01d4e88690cee3d642033b596ed0b63b672b627e563ae904f7472f5df0",
+    "data/graph.ttl": "0d2ee4eab13048318706716b07e27dd4270ad0e84664d476c1024e87c1d06d28",
+    "data/graph_events.jsonl": "5ad0c252715be35e228cfd60393ac340391a7b112aa769953d246104ba9f1759",
+    "data/knowledge_seed_01.rdf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/ledger.jsonl": "5b2896121afbf09eefa5eaa02159a63082164d8873713fd8e869f9c51c7c2907",
+    "data/zenodo_v2_standard.ttl": "8236a3cf13e3fbb7fa38f47bb33b08c195a48afe48e9175e9d900c0a4a50732f",
+    "epistemics/assertion-model.md": "76b6fa229684b87fc89b3c7780aef2832218827b364b351721f2437a97d385f9",
+    "epistemics/contract.md": "1404c136049264b4d4535c73b31ecb15eb2d8d5a86ccdba571c4557980905ae2",
+    "governance/agent-orchestration.md": "f6c4235c7c1ee2295e6eec633508870fa4b11965a12807120995dfaf67509ebc",
+    "governance/consistency-check.md": "202e166859b34915169830d2ba447b5ab26b2cdb608038e6a769d93aaa973f7b",
+    "governance/execution-pipeline.md": "2eda92b41b4d407bf081e320a6a8299c8e1bd1f52fa8f5db953bb6a061e24f65",
+    "governance/kernel-binding.md": "fb9bcba2b40596c8a0d01f2ef7080b45488e6a38cfa2351968eb588e81ad8b38",
+    "governance/rules.md": "da6dc788fbad2f642db7ea6258b8b1f262c25222d813b74916bda8f8e57fa9ce",
+    "ontology/identity-manifest.ttl": "ad922fd96bd87a67ee75caead1f6615e04341bd0bc002fe7797f1bcb05dc2618",
+    "ontology/padi.ttl": "637f4e75093e28d46d6d58cd98c28c90bd997a9a9eaceb01c817fbfe2d64149e",
+    "ontology/padi_taxonomy_v1.ttl": "713911644c2a847a5a0db3ead826fb7471b3920c79d472d89235927ef7ba7d3c",
+    "ontology/projection-contract.jsonld.md": "87b8da37358febd8683a14a5e3e220cb123fd6ee947191d55b99b37f173c5592",
+    "quarantine/rogue_asset.ttl": "6dc93affef8a3349380e8156e443e18d6628de14d27684ccfaa13b0f77c9d1a6",
+    "queries/sparql-library.md": "0f7b7fc2cf7d1a9094635178420dff65e155481a898a21b19f3c011083bd548a",
+    "runtime/agent-execution-runtime.md": "048ec1e1ba8fa525b96c776eedc08b33f255743cb6bef589675917c11e1d007d"
 }
