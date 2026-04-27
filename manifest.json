@@ -1,11 +1,50 @@
 {
-  "bureau_id": "PADI-NBO-001",
-  "name": "The Peculiar Librarian Perspective",
-  "version": "2.0.0",
-  "standards": ["PADI-CORE-SHACL", "ZENODO-DOI-ENFORCED"],
-  "endpoints": {
-    "ledger": "/daemon.log",
-    "validation": "/constraints/padi_core_shapes.ttl"
-  },
-  "status": "Operational"
+    "bureau_name": "PADI Sovereign Bureau",
+    "kernel_version": "4.0",
+    "assets": [
+        {
+            "type": "data",
+            "name": "graph.ttl"
+        },
+        {
+            "type": "data",
+            "name": "ledger.jsonl"
+        },
+        {
+            "type": "data",
+            "name": "knowledge_seed_01.rdf"
+        },
+        {
+            "type": "data",
+            "name": "graph_events.jsonl"
+        },
+        {
+            "type": "data",
+            "name": "zenodo_v2_standard.ttl"
+        },
+        {
+            "type": "ontology",
+            "name": "padi.ttl"
+        },
+        {
+            "type": "ontology",
+            "name": "projection-contract.jsonld.md"
+        },
+        {
+            "type": "ontology",
+            "name": "padi.jsonld"
+        },
+        {
+            "type": "constraints",
+            "name": "shapes.shacl"
+        },
+        {
+            "type": "constraints",
+            "name": "padi_core_shapes.ttl"
+        },
+        {
+            "type": "constraints",
+            "name": "pc0003.rules.json"
+        }
+    ]
 }
