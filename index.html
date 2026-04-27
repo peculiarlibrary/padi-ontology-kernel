@@ -2,28 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PADI Sovereign Bureau | A2UI</title>
-    <link rel="stylesheet" href="style.css">
+    <title>PADI Sovereign Bureau | Identity Portal</title>
+    <style>
+        body { background: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; padding: 40px; }
+        .fortified { color: #3fb950; border: 1px solid #3fb950; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; }
+        .card { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 20px; margin-top: 20px; }
+        h1 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
+        ul { list-style: none; padding: 0; }
+        li { padding: 8px 0; border-bottom: 1px solid #21262d; font-family: monospace; }
+        .tag { color: #8b949e; margin-right: 10px; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>PADI Sovereign Bureau</h1>
-        <div id="status-badge">Status: Fortified</div>
-    </header>
+    <h1>PADI Sovereign Bureau <span class="fortified">Status: Fortified</span></h1>
     
-    <main>
-        <section id="identity-card">
-            <h2>Bureau Identity</h2>
-            <div id="passport-data">Loading Passport...</div>
-        </section>
+    <div class="card">
+        <h3>| Bureau Identity</h3>
+        <p id="bureau-id">Architect: Samuel Muriithi Gitandu (The Peculiar Librarian)</p>
+        <p id="node-status">Node: Global Settlement Node (Active)</p>
+    </div>
 
-        <section id="registry">
-            <h2>Knowledge Assets</h2>
-            <ul id="asset-list"></ul>
-        </section>
-    </main>
+    <div class="card">
+        <h3>| Knowledge Assets</h3>
+        <ul id="asset-list">Loading Assets from Kernel...</ul>
+    </div>
 
-    <script src="app.js"></script>
+    <script>
+        const manifestUrl = "https://raw.githubusercontent.com/peculiarlibrary/padi-ontology-kernel/main/manifest.json";
+        
+        fetch(manifestUrl)
+            .then(response => response.json())
+            .then(data => {
+                const list = document.getElementById('asset-list');
+                list.innerHTML = ""; // Clear loader
+                
+                if (data.assets) {
+                    data.assets.forEach(asset => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<span class="tag">[ASSET]</span> ${asset.path}`;
+                        list.appendChild(li);
+                    });
+                } else {
+                    list.innerHTML = "<li>No assets found in manifest.</li>";
+                }
+            })
+            .catch(err => {
+                document.getElementById('asset-list').innerHTML = "<li style='color:#f85149'>Error: Failed to fetch Kernel Manifest.</li>";
+                console.error(err);
+            });
+    </script>
 </body>
 </html>
