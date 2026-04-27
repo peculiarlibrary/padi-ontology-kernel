@@ -1,3 +1,6 @@
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 name: PADI Bureau Integrity Audit
 
 on:
