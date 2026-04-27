@@ -42,3 +42,19 @@ padi:AgenticOrchestration a padi:SystemsArchitecture ;
 padi:StructuredAnalysis a padi:ResearchAnalysis ;
     rdfs:label "Structured Analysis" ;
     padi:hasDepth "L2"^^xsd:string .
+
+# --- Level 1: Model Context Protocol (MCP) ---
+:ModelContextProtocol a :PracticeArea ;
+    :hasLevel "L1" ;
+    :description "Standards for agentic interfacing and semantic context delivery." .
+
+# --- Level 2: MCP Specializations ---
+:AgenticDiscovery a :Specialization ;
+    :hasLevel "L2" ;
+    :partOf :ModelContextProtocol ;
+    :description "Autonomous identification of Bureau assets by AI agents." .
+
+:SemanticContext a :Specialization ;
+    :hasLevel "L2" ;
+    :partOf :ModelContextProtocol ;
+    :description "The delivery of structured metadata to Large Language Models." .
