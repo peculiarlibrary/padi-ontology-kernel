@@ -1,0 +1,28 @@
+@prefix padi: <https://peculiarlibrary.github.io/padi-ontology-kernel#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### --- PADI MASTER TAXONOMY V1.1 --- ###
+
+padi:PracticeArea a owl:Class ;
+    rdfs:label "Practice Area" ;
+    rdfs:comment "A top-level domain defining the scope of the Sovereign Bureau." .
+
+padi:InformationScience a padi:PracticeArea ;
+    rdfs:label "Information Science" ;
+    rdfs:comment "The study of information architecture and systematic governance." .
+
+padi:DigitalCommunications a padi:PracticeArea ;
+    rdfs:label "Digital Communications" ;
+    rdfs:comment "Strategic management of digital information and network orchestration." .
+
+padi:DepthMetric a owl:Class ;
+    rdfs:label "Depth Metric" ;
+    rdfs:comment "A deterministic classification used to measure Knowledge Asset complexity." .
+
+### --- INSTANCE MAPPING --- ###
+
+padi:OntologyEngineering a padi:InformationScience ;
+    rdfs:label "Ontology Engineering" ;
+    padi:hasDepth "L2"^^xsd:string .
