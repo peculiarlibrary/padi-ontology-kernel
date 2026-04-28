@@ -2,7 +2,7 @@
   "bureau_name": "PADI Sovereign Bureau",
   "governing_architect": "Samuel Muriithi Gitandu, B.S.",
   "kernel_version": "4.1.0",
-  "last_updated": "2026-04-28T13:03:05Z",
+  "last_updated": "2026-04-28T13:05:05Z",
   "zenodo_doi": "10.5281/zenodo.18894084",
   "assets": [
     {
@@ -13,17 +13,17 @@
       "version": "1.0.0"
     },
     {
+      "name": "graph_events.jsonl",
+      "type": "data",
+      "path": "data/graph_events.jsonl",
+      "sha256": "5ad0c252715be35e228cfd60393ac340391a7b112aa769953d246104ba9f1759",
+      "version": "1.0.0"
+    },
+    {
       "name": "foreign_asset.ttl",
       "type": "data",
       "path": "data/foreign_asset.ttl",
       "sha256": "da01ab01d4e88690cee3d642033b596ed0b63b672b627e563ae904f7472f5df0",
-      "version": "1.0.0"
-    },
-    {
-      "name": "ledger.jsonl",
-      "type": "data",
-      "path": "data/ledger.jsonl",
-      "sha256": "5b2896121afbf09eefa5eaa02159a63082164d8873713fd8e869f9c51c7c2907",
       "version": "1.0.0"
     },
     {
@@ -34,13 +34,6 @@
       "version": "1.0.0"
     },
     {
-      "name": "graph_events.jsonl",
-      "type": "data",
-      "path": "data/graph_events.jsonl",
-      "sha256": "5ad0c252715be35e228cfd60393ac340391a7b112aa769953d246104ba9f1759",
-      "version": "1.0.0"
-    },
-    {
       "name": "zenodo_v2_standard.ttl",
       "type": "data",
       "path": "data/zenodo_v2_standard.ttl",
@@ -48,24 +41,17 @@
       "version": "1.0.0"
     },
     {
-      "name": "identity-manifest.ttl",
-      "type": "ontology",
-      "path": "ontology/identity-manifest.ttl",
-      "sha256": "ad922fd96bd87a67ee75caead1f6615e04341bd0bc002fe7797f1bcb05dc2618",
+      "name": "ledger.jsonl",
+      "type": "data",
+      "path": "data/ledger.jsonl",
+      "sha256": "5b2896121afbf09eefa5eaa02159a63082164d8873713fd8e869f9c51c7c2907",
       "version": "1.0.0"
     },
     {
-      "name": "padi_taxonomy_v1.ttl",
+      "name": "padi.jsonld",
       "type": "ontology",
-      "path": "ontology/padi_taxonomy_v1.ttl",
-      "sha256": "713911644c2a847a5a0db3ead826fb7471b3920c79d472d89235927ef7ba7d3c",
-      "version": "1.0.0"
-    },
-    {
-      "name": "padi.ttl",
-      "type": "ontology",
-      "path": "ontology/padi.ttl",
-      "sha256": "637f4e75093e28d46d6d58cd98c28c90bd997a9a9eaceb01c817fbfe2d64149e",
+      "path": "ontology/padi.jsonld",
+      "sha256": "0159917989d4e7863c89bab8b539f8a5b42934779811da4c4d7ab127c7cb3943",
       "version": "1.0.0"
     },
     {
@@ -76,10 +62,31 @@
       "version": "1.0.0"
     },
     {
-      "name": "padi.jsonld",
+      "name": "padi_taxonomy_v1.ttl",
       "type": "ontology",
-      "path": "ontology/padi.jsonld",
-      "sha256": "0159917989d4e7863c89bab8b539f8a5b42934779811da4c4d7ab127c7cb3943",
+      "path": "ontology/padi_taxonomy_v1.ttl",
+      "sha256": "713911644c2a847a5a0db3ead826fb7471b3920c79d472d89235927ef7ba7d3c",
+      "version": "1.0.0"
+    },
+    {
+      "name": "identity-manifest.ttl",
+      "type": "ontology",
+      "path": "ontology/identity-manifest.ttl",
+      "sha256": "ad922fd96bd87a67ee75caead1f6615e04341bd0bc002fe7797f1bcb05dc2618",
+      "version": "1.0.0"
+    },
+    {
+      "name": "padi.ttl",
+      "type": "ontology",
+      "path": "ontology/padi.ttl",
+      "sha256": "637f4e75093e28d46d6d58cd98c28c90bd997a9a9eaceb01c817fbfe2d64149e",
+      "version": "1.0.0"
+    },
+    {
+      "name": "pc0003.rules.json",
+      "type": "constraints",
+      "path": "constraints/pc0003.rules.json",
+      "sha256": "28bd44636dc8e12d9fc6690329a82a9e571b1edd5409dbb30ea01224d047ce91",
       "version": "1.0.0"
     },
     {
@@ -94,13 +101,6 @@
       "type": "constraints",
       "path": "constraints/padi_core_shapes.ttl",
       "sha256": "015b9dfaa4884f074114eb371ead8396e364f8bc68b559edc27a8089f1e323ed",
-      "version": "1.0.0"
-    },
-    {
-      "name": "pc0003.rules.json",
-      "type": "constraints",
-      "path": "constraints/pc0003.rules.json",
-      "sha256": "28bd44636dc8e12d9fc6690329a82a9e571b1edd5409dbb30ea01224d047ce91",
       "version": "1.0.0"
     }
   ]
