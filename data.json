@@ -7,12 +7,14 @@
         {
             "id": "PC-0007",
             "title": "VRP Conflict Resolution",
-            "epoch": 1777383593
+            "epoch": 1777383593,
+            "path": "archive/releases/PC-0007.md"
         },
         {
             "id": "PC-0008",
             "title": "Concurrency Sovereignty",
-            "epoch": 1777383593
+            "epoch": 1777383593,
+            "path": "archive/releases/PC-0008.md"
         }
     ]
 }

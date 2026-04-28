@@ -1,1 +1,1 @@
-14533b249e1c1ad4ad46590eb9b79c0ab959569c20afea08ed15331dafa707dc *manifest.json
+2518e5b8bb4eb908c8ec4f4ae9f1a67ebbf6ce48b87d1284ea3868ff7f7b8b06 *manifest.json
