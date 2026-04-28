@@ -7,6 +7,11 @@
             "id": "PC-0007",
             "title": "VRP Conflict Resolution",
             "timestamp": 1777383593
+        },
+        {
+            "id": "PC-0008",
+            "title": "Concurrency Sovereignty",
+            "timestamp": 1777383593
         }
     ]
 }
