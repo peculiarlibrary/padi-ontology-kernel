@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+    <title>The Peculiar Librarian - PADI Kernel</title>
+    <link>https://peculiarlibrary.github.io/padi-ontology-kernel/</link>
+    <description>Formal technical standards for the Sovereign Bureau.</description>
+    <language>en-us</language>
+    
+        <item>
+            <title>PC-0007: VRP Conflict Resolution</title>
+            <link>https://github.com/peculiarlibrary/padi-ontology-kernel/wiki/PC-0007</link>
+            <description>Sovereign technical documentation from the PADI Bureau.</description>
+            <pubDate>Tue, 28 Apr 2026 16:39:53 +0000</pubDate>
+            <guid isPermaLink="false">PC-0007</guid>
+        </item>
+        <item>
+            <title>PC-0008: Concurrency Sovereignty</title>
+            <link>https://github.com/peculiarlibrary/padi-ontology-kernel/wiki/PC-0008</link>
+            <description>Sovereign technical documentation from the PADI Bureau.</description>
+            <pubDate>Tue, 28 Apr 2026 16:39:53 +0000</pubDate>
+            <guid isPermaLink="false">PC-0008</guid>
+        </item>
+</channel>
+</rss>
