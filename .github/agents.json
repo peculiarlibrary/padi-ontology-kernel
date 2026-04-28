@@ -1,0 +1,24 @@
+{
+  "name": "PADI Sovereign Bureau Agents",
+  "description": "The 9 Fliers: Deterministic agents governing the Nairobi-2026 Node.",
+  "agents": [
+    {
+      "id": "head-librarian",
+      "name": "The Head Librarian",
+      "role": "Orchestrator",
+      "description": "Maintains the Sovereign Vault and synchronizes the Lectern."
+    },
+    {
+      "id": "ambassador-01",
+      "name": "The Ambassador",
+      "role": "Communication",
+      "description": "Manages the Wiki mirror and RSS Broadcaster."
+    },
+    {
+      "id": "sentinel-01",
+      "name": "The Sentinel",
+      "role": "Security",
+      "description": "Enforces SHA-256 signature verification on all manifest updates."
+    }
+  ]
+}
