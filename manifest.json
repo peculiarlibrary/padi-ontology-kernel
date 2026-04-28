@@ -2,5 +2,11 @@
     "epoch": 1777383593,
     "authority": "The Peculiar Librarian",
     "status": "Canonical",
-    "assets": []
+    "assets": [
+        {
+            "id": "PC-0007",
+            "title": "VRP Conflict Resolution",
+            "timestamp": 1777383593
+        }
+    ]
 }
