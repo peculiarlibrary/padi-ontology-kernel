@@ -2,8 +2,9 @@
 name: Structural Flaw Report
 about: Report a violation of SHACL shapes or logic inconsistencies.
 title: "[FLAW]: "
-labels: bug, structural
+labels: bug
 assignees: peculiarlibrary
+
 ---
 
 **Describe the Flaw**

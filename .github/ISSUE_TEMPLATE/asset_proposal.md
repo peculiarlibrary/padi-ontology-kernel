@@ -2,8 +2,9 @@
 name: Knowledge Asset Proposal
 about: Propose a new RDF/Turtle asset for the Sovereign Registry.
 title: "[PROPOSAL]: "
-labels: enhancement, metadata
+labels: bug, enhancement
 assignees: peculiarlibrary
+
 ---
 
 **Asset Description**
