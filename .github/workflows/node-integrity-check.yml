@@ -18,9 +18,11 @@ jobs:
           sudo apt-get install -y jq gnupg
 
       - name: Import GPG Key
-        if: ${{ secrets.LIBRARIAN_PUB_GPG != '' }}
+        env:
+          GPG_KEY: ${{ secrets.LIBRARIAN_PUB_GPG }}
+        if: env.GPG_KEY != ''
         run: |
-          echo "${{ secrets.LIBRARIAN_PUB_GPG }}" > librarian.gpg
+          echo "$GPG_KEY" > librarian.gpg
           gpg --import librarian.gpg
 
       - name: Verify Manifest
