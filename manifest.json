@@ -1,109 +1,114 @@
-e4906e0a9d9b5492f4acb76fb7bcde80c6a472e9fd6bd2d9e337633671d834f8 *./agents/agent-spec.md
-b0626bbece688609c42f58163adf953d761d2366dd8979e4e7de65317378179d *./agents/auditor.py
-af71c4a682c6bc29d005852daf6915bde391b8a2165d2619ae89f289999cb144 *./agents/auditor_local.py
-bcb88f765139a85a4dc4d0795b4fe64bbbd79b646d480c190af35cc6badb4b7f *./agents/cataloger.py
-51292fdfa8d453bfba242a4d47f6a5734823d96685826d3122cde21f0c73416b *./agents/foreman.py
-e28d3743c00d8bb30ca8995820be1c77cd6b195a670210ba08a58bf6bd519dcf *./agents/head_librarian.py
-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *./agents/liaison.py
-bf7804a26833ed990a1c67c0a4524f80ba974993b5d8fa82609a4e385a265605 *./agents/registry_agent.py
-cae4f6973a1a6d20e48730bb4fbdf223c9ad86a414a1947fe6f076ff52e75aea *./agents/scout.py
-e428fd3fd336e697b6cd7989c451954b3b5c89a0379dfb215a6c8fc4537d9e6d *./agents/sentinel.py
-22599893faa33dda425a3400965cefbd42f7bf7ffed571fe9ff1345c7df17254 *./agents/verify_authority.py
-f8e12f8910e3bcbfcf221f8d85aba3033b28cceecd7cb8688009c0b7f40001cf *./bin/catalog
-40677bddf8a0ee3950fe0c4d2526fd276de9ace6c9369267e89afdf36f31a0dd *./bootstrap.sh
-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *./broadcast.jsonld
-8a5c58fe1041e6f34c2e118b477f7387c240a70accff2e5b32b1078ada99e7b9 *./CODE_OF_CONDUCT.md
-eeb4db28cf4762bb6c68bef390582ab948688ac7fe4f8894757746766a20f3d4 *./constraints/padi_core_shapes.ttl
-28bd44636dc8e12d9fc6690329a82a9e571b1edd5409dbb30ea01224d047ce91 *./constraints/pc0003.rules.json
-de344280a559cb9e608c5015805a11adfd4078cd5f1f3211a8e10a38adb867b5 *./constraints/shapes.shacl
-c4542d04843e545510a40911105e01b0e866098ef3d167ee6a1a87de1f261fa7 *./CONTRIBUTING.md
-f8e2ef8730cccb71f7b7c1fde85923b8ec6f5edb111f4c86c2d566ba4f226480 *./daemon.log
-530d2f3354eec81ead146a9ac454ed6dd4f1e51cd49db9f2c9e45689b722ebd7 *./daemon.log.bak
-da01ab01d4e88690cee3d642033b596ed0b63b672b627e563ae904f7472f5df0 *./data/foreign_asset.ttl
-0d2ee4eab13048318706716b07e27dd4270ad0e84664d476c1024e87c1d06d28 *./data/graph.ttl
-5ad0c252715be35e228cfd60393ac340391a7b112aa769953d246104ba9f1759 *./data/graph_events.jsonl
-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *./data/knowledge_seed_01.rdf
-5b2896121afbf09eefa5eaa02159a63082164d8873713fd8e869f9c51c7c2907 *./data/ledger.jsonl
-12919f5e1889c77501fbf30eb2b4c5a48bdeaa2c982a54f0ad7109d22d4ea799 *./data/registry.ttl
-7ed5e9bf5d0d93a973c93f08093cc2de6b329c3107da14790e92e8cd24edddc7 *./data/zenodo_v2_standard.ttl
-0176be15aa87d24397a49952c7d30ad3fb78b71b124c9966d3cade5e0544269b *./data.json
-76b6fa229684b87fc89b3c7780aef2832218827b364b351721f2437a97d385f9 *./epistemics/assertion-model.md
-1404c136049264b4d4535c73b31ecb15eb2d8d5a86ccdba571c4557980905ae2 *./epistemics/contract.md
-44d89f11f02dc983eb3d79960a3c6ae628d6029bd0a11476a67243005c401a6c *./epistemics/epistemic-engine.py
-00b5bc3cc1563d9379ab15bc59dd52897864132b66be20d48ce01295a60ab562 *./epistemics/__init__.py
-488342ad544581280078ae100c98bfef1d288e89f54e4bafe88f4df290db17f5 *./feed.xml
-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *./FETCH_HEAD
-f6c4235c7c1ee2295e6eec633508870fa4b11965a12807120995dfaf67509ebc *./governance/agent-orchestration.md
-202e166859b34915169830d2ba447b5ab26b2cdb608038e6a769d93aaa973f7b *./governance/consistency-check.md
-2eda92b41b4d407bf081e320a6a8299c8e1bd1f52fa8f5db953bb6a061e24f65 *./governance/execution-pipeline.md
-44d89f11f02dc983eb3d79960a3c6ae628d6029bd0a11476a67243005c401a6c *./governance/governance-engine.py
-fb9bcba2b40596c8a0d01f2ef7080b45488e6a38cfa2351968eb588e81ad8b38 *./governance/kernel-binding.md
-da6dc788fbad2f642db7ea6258b8b1f262c25222d813b74916bda8f8e57fa9ce *./governance/rules.md
-219b685c894865ff11470e0e744957adf441dcbd498e9f09e45933f9fe558461 *./governance/__init__.py
-9c162a77c1b35171f6e5bd00e1f32b97960e7d9a9fd6bbe40f15077a7b16f856 *./index.html
-3e7d56bdfd70014b990625937c86632f9edd3674b55647d9c0fec728d26f4cf3 *./kernel-wiki-local/current_epoch.json
-9a10a0316ff8be7035c77d283869f33a50f757b70a93c4d0bba236800f937f9d *./kernel-wiki-local/Home.md
-0cdc5990c959e615ee4a2cd2cc965b830431d5ec135205029bd57312266aa79f *./kernel-wiki-local/PC-0007-VRP-Conflict-Resolution.md
-405d8c5aa677c47f9350cf3c0ccc6af06f66215b8cd717c83f215c5efabe0484 *./kernel-wiki-local/PC-0008-Concurrency-Sovereignty.md
-91c38850a7bbdcd377452f2eacfc34f9fde3560dc5ea45671980a6f83b3ffd7e *./kernel-wiki-local/README.md
-ee53a59def7c43955deda68f898bd5710cfc5ca0f2a997560c95090651c4a81f *./kernel-wiki-local/SECURITY.md
-7348c5556a758ed329ee4f90242bd96c7877a92f80f484159b251680c82228e9 *./librarian_private.pem
-cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30 *./LICENSE
-5e05b378ae69a402f3990c5ae122b27b53bb26debdb51115c02db41fec7617bc *./manifest.json
-ad922fd96bd87a67ee75caead1f6615e04341bd0bc002fe7797f1bcb05dc2618 *./ontology/identity-manifest.ttl
-0159917989d4e7863c89bab8b539f8a5b42934779811da4c4d7ab127c7cb3943 *./ontology/padi.jsonld
-637f4e75093e28d46d6d58cd98c28c90bd997a9a9eaceb01c817fbfe2d64149e *./ontology/padi.ttl
-713911644c2a847a5a0db3ead826fb7471b3920c79d472d89235927ef7ba7d3c *./ontology/padi_taxonomy_v1.ttl
-87b8da37358febd8683a14a5e3e220cb123fd6ee947191d55b99b37f173c5592 *./ontology/projection-contract.jsonld.md
-77bce6823eb2c5db06b4ea470fa77eb955e0de1a8b80711c16e291cb4d95d867 *./padi
-237cf7bff7bea9b4773fe50874f0bcb1d159892ee13fbd611d2105e1786e1fd2 *./PC-0011-Sample-Fail.ttl
-f375ba82f8707579ee22287b197f120d6c99fe3e4cba295bc50e8305fac5f4e5 *./PC-0011-Sample-Pass.ttl
-6dc93affef8a3349380e8156e443e18d6628de14d27684ccfaa13b0f77c9d1a6 *./quarantine/rogue_asset.ttl
-0f7b7fc2cf7d1a9094635178420dff65e155481a898a21b19f3c011083bd548a *./queries/sparql-library.md
-91c38850a7bbdcd377452f2eacfc34f9fde3560dc5ea45671980a6f83b3ffd7e *./README.md
-5e4d2b2b0b0a69db69456d9d2e513dec5dfeeb9162b8f96953beecd13fc97f92 *./registry.log
-7377ba0ff69aa30dadabdb809cbabce0f1eb8cabd5a0d4b9cb340aa260704f0a *./requirements.lock
-ff62a45b621973bb447c9af41f2f1aa6df1ffa3f6edd026ccc83116a411330a9 *./requirements.txt
-048ec1e1ba8fa525b96c776eedc08b33f255743cb6bef589675917c11e1d007d *./runtime/agent-execution-runtime.md
-dd58cfd0117d98d40103d082a0c615f52e13bd0b6182b4781911077a5572761a *./runtime/agent_executor.py
-f3cc314b24ef8a734353aeb25054a300f9f9081d9ce5539ed3acbe751395a25b *./runtime/agent_runtime.py
-819130c48bd91321d5df544909c9408332214edb415d95ace9f3d3c6f4d37515 *./runtime/cli.py
-8a4b95ba8aaa9a7ab7643633759cf223e8b28132afc5eb47b3211ec24dfe2a59 *./runtime/compliance.py
-55bbe69842503ac32e6186e09bd475b9f5e6239d4f14c510c46aa04cf10a7bd0 *./runtime/domain.py
-503821e0f7cd5a1aa53fc438f7abd148466c2a69b251482ad83d59c595970bcc *./runtime/event_store.py
-217e099bede8d7dccd9479933115a70bcd2fe3cb0a9bf4dedc148fca5f8ddc3c *./runtime/evidence.py
-0678664e0d74e089518b5263bce4e1c248551502b5856ba6a5dd9808c398585f *./runtime/executor.py
-77e28f4e31e84cc1c9c8e75ebda9670e3a1d2e1a5c29826244aeeff64e47fc2e *./runtime/generation.py
-897c4da8024fbfef12478243633e538d1387e4f9ebaf761aac491492f86a4279 *./runtime/governance.py
-a269dca8fac34d56ccf070a7db8384f877953bcf4ef9fc7c6a02b3388a1b2cba *./runtime/graph_replay.py
-bd439dabf1102362436eb3c1d7e7492943fbc222a1948f920d044f815e8f7675 *./runtime/graph_store.py
-9591f579a86e03220b8344b3a675d914a7ee3e33da06bf7554585cb13caabad8 *./runtime/graph_validator.py
-f9f3f01a096a619a2a2098a90d6dfc5bd1e42335b0eb09cbf9b3f64b1e17ce5f *./runtime/inference.py
-8206e682a11352377297243326140f2ad55ad78538a681257f3a4f2f233df5e9 *./runtime/ledger.py
-4ff9a3d9b87d45e7642cf65ee7a6b552657421a60d7671ffd086d71887bb3922 *./runtime/mutation.py
-35988cc2ecf88b9280ec6f84c65da39b85872e400fd1acab9d789e899ebb6896 *./runtime/mutation_engine.py
-95458e5d26b143dfcde46abb15c8b619c88759a7ab08119ecaef60c02d006d30 *./runtime/padi_core.py
-696699eaad4edc8b9b48a1e6538cf8fffb0975d5e4516489a380bebccc744953 *./runtime/rdf_utils.py
-77f4a5a3a90cba1102e2dad0af33702c6c72e5be63737664cc68d9593f33a881 *./runtime/replay.py
-e58c9893d4c3f1ac7fc9bcce4d9262597e5732e9cc6a6ea361a3d2bb44346ae9 *./runtime/router.py
-4dd5e0c4a687de7a027b33ea2e887a92d3a17105343b1ed8c710f0c9ced78382 *./runtime/store.py
-fb56bad2924f67b6551fb2c1f71da094dc00302dca0395c237977f1babb0b71b *./runtime/system_audit.py
-7c3e99da33c62cc3391e2446a66570f0b94db16bf0d2ef31426b56a00c990771 *./runtime/transaction.py
-b3fa14d9f275b89a19ee7509b5ca9bf8b34224cf999f499187cea1afce800680 *./runtime/__init__.py
-b5ca82fcc6e4ff074c5c78329a24bbf8f136f624f564bdc0bbf6dd3e8042ee8a *./runtime.stability.rules.json
-d7e00de54e4c9c30b68bb5a160b0d0f1f67651a117b7048c6ceeb16ea49184c2 *./scripts/audit.py
-e7d074a23bdcd86aafdc9804e35ffe56586bf502eb8faa9e26300f844ace9122 *./scripts/catalog_daemon.sh
-e2e0505c0bf148b035139ace5ad58a8e467d3528ed996e9ca81c565355dca5dd *./scripts/catalog_watcher.py
-7fb22a87dce6d765a7ecfb9a768f6d16ff335f6c43e0f6a94cb3201e78c9543d *./scripts/generate_hashes.py
-0b670bfa872c8743a143b98d48fc09ff2e407627c5e1a12adf042eaa32a3caba *./scripts/generate_rss.sh
-1ed86edec3b73d8570f91d4117c5262bea83828c9a12b387964efeca58180e13 *./scripts/load_graph.py
-69c6aefdb3f07a7c4c82833957dda2f3115875e017fb8f1f220ab09316cc1fee *./scripts/padi_upgrade.py
-5fdc256789db4f8345c060f8194f1e1aadc39e92638eb8dc47ce7bcd1f45fd1d *./scripts/quick_audit.py
-014c3b54a760e9128394f032f5c44ba8afd803451b9ce692ff7affeddd2498a8 *./scripts/settle.sh
-8fae4e4313332b4ff584451cc57e6f274c31445d80c7b723cfbe157865a79b42 *./scripts/shacl_validate.py
-6df3422916080af67df520791a409ae0ae298a40d6b442fbaac269e3b843e321 *./scripts/sync_registry.sh
-ee53a59def7c43955deda68f898bd5710cfc5ca0f2a997560c95090651c4a81f *./SECURITY.md
-ba1b9f17b836f7ff7670d1e7b1377fc3943a75ef4b38d5debb418c498a35acd7 *./style.css
-7b447c2709cfb3025050946896e5819b1e21981b30b2747fadb6d27d4c2225cd *./verify-node.ps1
-ee7bd5a9ce587b82840f27bbbab752262ae82fbfa9fc6264f05c66beaf293d38 *./verify-node.sh
-7389e67bedafc9ccd3af4bd06b4cc68eec5882e888a86afc66d364fbe07f1e30 *./wiki/PC-0010-Authority-Ledger.md.asc
+{
+  "bureau_name": "PADI Sovereign Bureau",
+  "governing_architect": "Samuel Muriithi Gitandu, B.S.",
+  "kernel_version": "4.1.0",
+  "last_updated": "2026-04-29T14:43:51Z",
+  "zenodo_doi": "10.5281/zenodo.18894084",
+  "assets": [
+    {
+      "name": "graph.ttl",
+      "type": "data",
+      "path": "data/graph.ttl",
+      "sha256": "0d2ee4eab13048318706716b07e27dd4270ad0e84664d476c1024e87c1d06d28",
+      "version": "1.0.0"
+    },
+    {
+      "name": "foreign_asset.ttl",
+      "type": "data",
+      "path": "data/foreign_asset.ttl",
+      "sha256": "da01ab01d4e88690cee3d642033b596ed0b63b672b627e563ae904f7472f5df0",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ledger.jsonl",
+      "type": "data",
+      "path": "data/ledger.jsonl",
+      "sha256": "5b2896121afbf09eefa5eaa02159a63082164d8873713fd8e869f9c51c7c2907",
+      "version": "1.0.0"
+    },
+    {
+      "name": "knowledge_seed_01.rdf",
+      "type": "data",
+      "path": "data/knowledge_seed_01.rdf",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "1.0.0"
+    },
+    {
+      "name": "graph_events.jsonl",
+      "type": "data",
+      "path": "data/graph_events.jsonl",
+      "sha256": "5ad0c252715be35e228cfd60393ac340391a7b112aa769953d246104ba9f1759",
+      "version": "1.0.0"
+    },
+    {
+      "name": "zenodo_v2_standard.ttl",
+      "type": "data",
+      "path": "data/zenodo_v2_standard.ttl",
+      "sha256": "7ed5e9bf5d0d93a973c93f08093cc2de6b329c3107da14790e92e8cd24edddc7",
+      "version": "1.0.0"
+    },
+    {
+      "name": "registry.ttl",
+      "type": "data",
+      "path": "data/registry.ttl",
+      "sha256": "12919f5e1889c77501fbf30eb2b4c5a48bdeaa2c982a54f0ad7109d22d4ea799",
+      "version": "1.0.0"
+    },
+    {
+      "name": "identity-manifest.ttl",
+      "type": "ontology",
+      "path": "ontology/identity-manifest.ttl",
+      "sha256": "ad922fd96bd87a67ee75caead1f6615e04341bd0bc002fe7797f1bcb05dc2618",
+      "version": "1.0.0"
+    },
+    {
+      "name": "padi_taxonomy_v1.ttl",
+      "type": "ontology",
+      "path": "ontology/padi_taxonomy_v1.ttl",
+      "sha256": "713911644c2a847a5a0db3ead826fb7471b3920c79d472d89235927ef7ba7d3c",
+      "version": "1.0.0"
+    },
+    {
+      "name": "padi.ttl",
+      "type": "ontology",
+      "path": "ontology/padi.ttl",
+      "sha256": "637f4e75093e28d46d6d58cd98c28c90bd997a9a9eaceb01c817fbfe2d64149e",
+      "version": "1.0.0"
+    },
+    {
+      "name": "projection-contract.jsonld.md",
+      "type": "ontology",
+      "path": "ontology/projection-contract.jsonld.md",
+      "sha256": "87b8da37358febd8683a14a5e3e220cb123fd6ee947191d55b99b37f173c5592",
+      "version": "1.0.0"
+    },
+    {
+      "name": "padi.jsonld",
+      "type": "ontology",
+      "path": "ontology/padi.jsonld",
+      "sha256": "0159917989d4e7863c89bab8b539f8a5b42934779811da4c4d7ab127c7cb3943",
+      "version": "1.0.0"
+    },
+    {
+      "name": "shapes.shacl",
+      "type": "constraints",
+      "path": "constraints/shapes.shacl",
+      "sha256": "de344280a559cb9e608c5015805a11adfd4078cd5f1f3211a8e10a38adb867b5",
+      "version": "1.0.0"
+    },
+    {
+      "name": "padi_core_shapes.ttl",
+      "type": "constraints",
+      "path": "constraints/padi_core_shapes.ttl",
+      "sha256": "eeb4db28cf4762bb6c68bef390582ab948688ac7fe4f8894757746766a20f3d4",
+      "version": "1.0.0"
+    },
+    {
+      "name": "pc0003.rules.json",
+      "type": "constraints",
+      "path": "constraints/pc0003.rules.json",
+      "sha256": "28bd44636dc8e12d9fc6690329a82a9e571b1edd5409dbb30ea01224d047ce91",
+      "version": "1.0.0"
+    }
+  ]
+}
