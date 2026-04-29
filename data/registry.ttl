@@ -3,5 +3,6 @@
 
 padi:SovereignRegistry_2026 a padi:Registry ;
     padi:governedBy "The Peculiar Librarian" ;
+    padi:hasDOI "10.5281/zenodo.18894084" ;
     padi:contains padi:Asset_002 ;
     padi:lastUpdated "2026-04-29"^^xsd:date .
