@@ -2,8 +2,9 @@ name: Node Integrity Check
 
 on:
   push:
-    branches: [ main ]
-  pull_request:  [ main ]
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   verify:
@@ -17,14 +18,14 @@ jobs:
           sudo apt-get install -y jq gnupg
 
       - name: Import GPG Key
-        if: \${{ secrets.LIBRARIAN_PUB_GPG != '' }}
+        if: ${{ secrets.LIBRARIAN_PUB_GPG != '' }}
         run: |
-          echo "\${{ secrets.LIBRARIAN_PUB_GPG }}" > librarian.gpg
+          echo "${{ secrets.LIBRARIAN_PUB_GPG }}" > librarian.gpg
           gpg --import librarian.gpg
 
       - name: Verify Manifest
         env:
-          LIBRARIAN_PUB: \${{ secrets.LIBRARIAN_PUB }}
+          LIBRARIAN_PUB: ${{ secrets.LIBRARIAN_PUB }}
         run: |
           chmod +x verify-node.sh
           ./verify-node.sh manifest.json manifest.sig
