@@ -1,46 +1,32 @@
-name: Node integrity check
+name: Node Integrity Check
 
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  verify-manifest:
-    name: Verify manifest and assets
+  verify:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Install tools
+      - name: Setup environment
         run: |
-          sudo apt-get update -y
-          sudo apt-get install -y jq gnupg openssl
+          sudo apt-get update
+          sudo apt-get install -y jq gnupg
 
-      - name: Ensure verify script is executable
-        run: chmod +x ./verify-node.sh
-
-      - name: Import PEM public key from secret
-        if: ${{ secrets.LIBRARIAN_PUB != '' }}
-        run: |
-          echo "${{ secrets.LIBRARIAN_PUB }}" > ./librarian_public.pem
-          chmod 600 ./librarian_public.pem
-
-      - name: Import GPG public key from secret
+      - name: Import GPG Key
         if: ${{ secrets.LIBRARIAN_PUB_GPG != '' }}
         run: |
-          echo "${{ secrets.LIBRARIAN_PUB_GPG }}" > ./librarian_public.gpg
-          gpg --import ./librarian_public.gpg
+          echo "${{ secrets.LIBRARIAN_PUB_GPG }}" > librarian.gpg
+          gpg --import librarian.gpg
 
-      - name: Fail if manifest or signature missing
-        run: |
-          if [ ! -f manifest.json ]; then echo "manifest.json not found"; exit 1; fi
-          if [ ! -f manifest.sig ]; then echo "manifest.sig not found"; exit 1; fi
-
-      - name: Run node verification
+      - name: Verify Manifest
         env:
-          LIBRARIAN_PUB: ./librarian_public.pem
-          LIBRARIAN_PUB_GPG: ./librarian_public.gpg
+          LIBRARIAN_PUB: ${{ secrets.LIBRARIAN_PUB }}
         run: |
+          chmod +x verify-node.sh
+          # Run the verification script against the provided manifest and signature
           ./verify-node.sh manifest.json manifest.sig
