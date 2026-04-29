@@ -1,0 +1,7 @@
+@prefix padi: <http://padi.internal/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+padi:SovereignRegistry_2026 a padi:Registry ;
+    padi:governedBy "The Peculiar Librarian" ;
+    padi:contains padi:Asset_002 ;
+    padi:lastUpdated "2026-04-29"^^xsd:date .

@@ -1,1 +1,7 @@
-2518e5b8bb4eb908c8ec4f4ae9f1a67ebbf6ce48b87d1284ea3868ff7f7b8b06 *manifest.json
+-----BEGIN PGP SIGNATURE-----
+
+iHUEABYKAB0WIQSjeZBujE/kH3fAwflmuX4//l9nJgUCafH4ugAKCRBmuX4//l9n
+JpvpAP4kWPsIySTBVywj23UmKiVPj18+BdM8rnsCrqETV89OMwD+MxQg7IwD2WRg
+Za3dD/vpoRjYufLBOrg8FNYpzv1sLQg=
+=zr9c
+-----END PGP SIGNATURE-----
