@@ -1,0 +1,9 @@
+@prefix padi: <https://padi.io/ontology/> .
+@prefix mck: <https://padi.io/ontology/mckinsey/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mck:ProblemSolvingFramework a padi:EpistemicAsset ;
+    padi:author "McKinsey Forward" ;
+    padi:governingStandard "PADI-v2.0" ;
+    padi:verificationStatus "Pending" ;
+    padi:padiDepth "1"^^xsd:integer .
