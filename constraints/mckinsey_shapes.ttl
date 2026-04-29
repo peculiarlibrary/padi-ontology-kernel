@@ -1,0 +1,12 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix mck: <https://padi.io/ontology/mckinsey/> .
+@prefix padi: <https://padi.io/ontology/> .
+
+mck:IssueTreeShape
+    a sh:NodeShape ;
+    sh:targetClass mck:ProblemSolvingFramework ;
+    sh:property [
+        sh:path padi:hasHypothesis ;
+        sh:minCount 1 ;
+        sh:message "Structural Error: A McKinsey Issue Tree must begin with a central Hypothesis." ;
+    ] .
