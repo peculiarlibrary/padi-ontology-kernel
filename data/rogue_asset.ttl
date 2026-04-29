@@ -1,0 +1,7 @@
+@prefix padi: <http://padi.internal/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+padi:Rogue_Asset_001 a padi:KnowledgeAsset ;
+    padi:hasDOI "10.5281/zenodo.illegal.001" ;
+    padi:status "Validated" . 
+    # CRITICAL: We are intentionally leaving out padi:certifiedBy
