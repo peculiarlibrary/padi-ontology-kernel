@@ -1,0 +1,8 @@
+:root {
+    --padi-gold: #D4AF37;
+    --padi-slate: #2F4F4F;
+    --padi-paper: #F4F4F9;
+}
+body { font-family: 'Inter', sans-serif; background: var(--padi-paper); color: var(--padi-slate); }
+.a2ui-header { border-top: 5px solid var(--padi-gold); background: var(--padi-slate); color: white; padding: 20px; }
+.a2ui-badge { border: 1px solid var(--padi-gold); padding: 5px 10px; border-radius: 4px; font-size: 0.8em; }
