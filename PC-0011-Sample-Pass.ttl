@@ -1,0 +1,8 @@
+@prefix padi: <http://padi.internal/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+padi:Asset_Alpha
+    a      padi:KnowledgeAsset ;
+    padi:hasDOI "10.5281/zenodo.0000001" ;
+    padi:status "Sovereign" ;
+    padi:certifiedBy "A379906E8C4FE41F77C0C1F966B97E3FFE5F6726" .

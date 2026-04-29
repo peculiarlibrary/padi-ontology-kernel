@@ -1,0 +1,8 @@
+@prefix padi: <http://padi.internal/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+padi:Asset_Beta
+    a      padi:KnowledgeAsset ;
+    padi:hasDOI "10.5281/zenodo.9999999" ;
+    padi:status "Validated" . 
+    # Notice: No certifiedBy property. The Guard should reject this.

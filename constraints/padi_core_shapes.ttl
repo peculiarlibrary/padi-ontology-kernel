@@ -9,14 +9,26 @@
 padi:KnowledgeAssetShape
     a sh:NodeShape ;
     sh:targetClass padi:KnowledgeAsset ;
+    
+    # 1. Persistence Check
     sh:property [
         sh:path padi:hasDOI ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
-        sh:message "Every KnowledgeAsset must have a registered DOI for sovereign persistence." ;
+        sh:message "Every KnowledgeAsset must have a registered DOI." ;
     ] ;
+    
+    # 2. Lifecycle Check
     sh:property [
         sh:path padi:status ;
-        sh:in ( "Draft" "Validated" "Archived" ) ;
+        sh:in ( "Draft" "Validated" "Archived" "Sovereign" ) ;
         sh:minCount 1 ;
+    ] ;
+
+    # 3. Cryptographic Authority (New)
+    sh:property [
+        sh:path padi:certifiedBy ;
+        sh:hasValue "A379906E8C4FE41F77C0C1F966B97E3FFE5F6726" ;
+        sh:minCount 1 ;
+        sh:message "Asset must be certified by the Head Librarian GPG Fingerprint." ;
     ] .
