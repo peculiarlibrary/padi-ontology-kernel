@@ -1,7 +1,17 @@
 {
   "node": "Nairobi-01",
-  "architect": "S.M. Gitandu",
+  "architect": "The Peculiar Librarian",
   "latest_publication": "PC-0014",
-  "active_constraints": ["mck:IssueTreeShape"],
-  "timestamp": "2026-04-29T16:08:07Z"
+  "status": "Operational",
+  "focus": "McKinsey Forward - Core Skills",
+  "timestamp": "2026-04-29T20:00:00Z",
+  "nodes": [
+    {"id": "Nairobi-01", "group": 1, "type": "Node"},
+    {"id": "PC-0014", "group": 2, "type": "Publication"},
+    {"id": "The Peculiar Librarian", "group": 3, "type": "Architect"}
+  ],
+  "links": [
+    {"source": "The Peculiar Librarian", "target": "Nairobi-01"},
+    {"source": "Nairobi-01", "target": "PC-0014"}
+  ]
 }
