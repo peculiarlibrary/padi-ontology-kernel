@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "padi": "https://padi.io/ontology/",
+    "schema": "http://schema.org/",
+    "name": "schema:name",
+    "status": "padi:hasStatus",
+    "node": "padi:NodeID"
+  },
+  "@id": "https://padi.io/nodes/nairobi-01",
+  "@type": "padi:SovereignNode",
+  "name": "Nairobi-01 Local Node",
+  "node": "N-1",
+  "status": "Fortified",
+  "schema:author": {
+    "@type": "schema:Person",
+    "name": "The Peculiar Librarian"
+  }
+}
