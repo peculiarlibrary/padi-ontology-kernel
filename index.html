@@ -2,24 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PADI Sovereign Bureau | Visualizer</title>
+    <title>PADI Sovereign Bureau | Virtual Authority</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
-        body { margin: 0; overflow: hidden; background: #0d1117; font-family: sans-serif; }
-        #overlay {
-            position: absolute; top: 20px; left: 20px; color: #58a6ff;
-            pointer-events: none; z-index: 10;
-        }
+        body { margin: 0; background: #0b0e14; color: #4a9eff; font-family: sans-serif; overflow: hidden; }
+        #header { position: absolute; top: 20px; left: 20px; z-index: 10; }
         svg { width: 100vw; height: 100vh; }
     </style>
 </head>
 <body>
-    <div id="overlay">
+    <div id="header">
         <h1>PADI Sovereign Bureau</h1>
-        <p>Node: Nairobi-01 | Architect: The Peculiar Librarian</p>
+        <p>Node: Nairobi-01 | Architect: Samuel Muriithi Gitandu</p>
     </div>
-    <svg id="visualizer"></svg>
-    <script src="app.js"></script>
-<script src="script.js"></script>
+    <div id="viz"></div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@ d3.json("metadata.json").then(data => {
     const height = window.innerHeight;
 
     // 1. Initialize SVG Canvas
-    const svg = d3.select("body").append("svg")
+    const svg = d3.select("#viz").append("svg")
         .attr("width", width)
         .attr("height", height);
 
