@@ -1,475 +1,56 @@
 {
   "nodes": [
-    {
-      "id": "IssueTreeShape",
-      "group": 1
-    },
-    {
-      "id": "NodeShape",
-      "group": 4
-    },
-    {
-      "id": "L2_SemanticWeb",
-      "group": 1
-    },
-    {
-      "id": "PracticeArea",
-      "group": 2
-    },
-    {
-      "id": "CognitiveSystems",
-      "group": 3
-    },
-    {
-      "id": "Domain",
-      "group": 4
-    },
-    {
-      "id": "belongsTo",
-      "group": 1
-    },
-    {
-      "id": "L3_AgenticSystems",
-      "group": 1
-    },
-    {
-      "id": "padi-ontology-kernel",
-      "group": 3
-    },
-    {
-      "id": "nb3b64f7491544d819f01c131db77f072b1",
-      "group": 4
-    },
-    {
-      "id": "SovereignRegistry_2026",
-      "group": 3
-    },
-    {
-      "id": "Registry",
-      "group": 4
-    },
-    {
-      "id": "authoredBy",
-      "group": 1
-    },
-    {
-      "id": "EpistemicAsset",
-      "group": 2
-    },
-    {
-      "id": "LLMSystems",
-      "group": 3
-    },
-    {
-      "id": "Concept",
-      "group": 4
-    },
-    {
-      "id": "n6ee13510723d484b962f16dc24fa0331b1",
-      "group": 3
-    },
-    {
-      "id": "string",
-      "group": 4
-    },
-    {
-      "id": "Class",
-      "group": 4
-    },
-    {
-      "id": "nairobi-01",
-      "group": 1
-    },
-    {
-      "id": "N620e89eb22f24dac985f255b14dd16bf",
-      "group": 4
-    },
-    {
-      "id": "foreign_asset.ttl",
-      "group": 3
-    },
-    {
-      "id": "SovereignAsset",
-      "group": 4
-    },
-    {
-      "id": "ObjectProperty",
-      "group": 4
-    },
-    {
-      "id": "n9001d6a327424f96ab6180c999e906e2b1",
-      "group": 4
-    },
-    {
-      "id": "n3f105ab423404de4bde7ba2ea9ae9b36b1",
-      "group": 3
-    },
-    {
-      "id": "Publication",
-      "group": 2
-    },
-    {
-      "id": "McKinsey_Forward",
-      "group": 1
-    },
-    {
-      "id": "hasLevel",
-      "group": 1
-    },
-    {
-      "id": "DatatypeProperty",
-      "group": 4
-    },
-    {
-      "id": "ConceptShape",
-      "group": 3
-    },
-    {
-      "id": "Asset_002",
-      "group": 3
-    },
-    {
-      "id": "KnowledgeAsset",
-      "group": 4
-    },
-    {
-      "id": "KnowledgeAssetShape",
-      "group": 3
-    },
-    {
-      "id": "ProblemSolvingFramework",
-      "group": 1
-    },
-    {
-      "id": "label",
-      "group": 4
-    },
-    {
-      "id": "n6ee13510723d484b962f16dc24fa0331b3",
-      "group": 3
-    },
-    {
-      "id": "n6ee13510723d484b962f16dc24fa0331b4",
-      "group": 4
-    },
-    {
-      "id": "hasHypothesis",
-      "group": 2
-    },
-    {
-      "id": "n6ee13510723d484b962f16dc24fa0331b7",
-      "group": 4
-    },
-    {
-      "id": "n6ee13510723d484b962f16dc24fa0331b6",
-      "group": 3
-    },
-    {
-      "id": "nil",
-      "group": 4
-    },
-    {
-      "id": "n6ee13510723d484b962f16dc24fa0331b2",
-      "group": 4
-    },
-    {
-      "id": "L1_MCP",
-      "group": 1
-    },
-    {
-      "id": "SovereignBureau",
-      "group": 4
-    },
-    {
-      "id": "certifiedBy",
-      "group": 4
-    },
-    {
-      "id": "hasDOI",
-      "group": 4
-    },
-    {
-      "id": "status",
-      "group": 4
-    },
-    {
-      "id": "Person",
-      "group": 4
-    },
-    {
-      "id": "n6ee13510723d484b962f16dc24fa0331b5",
-      "group": 4
-    },
-    {
-      "id": "SovereignNode",
-      "group": 2
-    }
+    {"id": "IssueTreeShape", "group": 1},
+    {"id": "NodeShape", "group": 4},
+    {"id": "L2_SemanticWeb", "group": 1},
+    {"id": "PracticeArea", "group": 2},
+    {"id": "CognitiveSystems", "group": 3},
+    {"id": "Domain", "group": 4},
+    {"id": "belongsTo", "group": 1},
+    {"id": "L3_AgenticSystems", "group": 1},
+    {"id": "padi-ontology-kernel", "group": 3},
+    {"id": "nb3b64f7491544d819f01c131db77f072b1", "group": 4},
+    {"id": "SovereignRegistry_2026", "group": 3},
+    {"id": "Registry", "group": 4},
+    {"id": "authoredBy", "group": 1},
+    {"id": "EpistemicAsset", "group": 2},
+    {"id": "LLMSystems", "group": 3},
+    {"id": "Concept", "group": 4},
+    {"id": "n6ee13510723d484b962f16dc24fa0331b1", "group": 3},
+    {"id": "string", "group": 4},
+    {"id": "Class", "group": 4},
+    {"id": "nairobi-01", "group": 1},
+    {"id": "N620e89eb22f24dac985f255b14dd16bf", "group": 4},
+    {"id": "foreign_asset.ttl", "group": 3},
+    {"id": "SovereignAsset", "group": 4},
+    {"id": "ObjectProperty", "group": 4},
+    {"id": "n9001d6a327424f96ab6180c999e906e2b1", "group": 4},
+    {"id": "n3f105ab423404de4bde7ba2ea9ae9b36b1", "group": 3},
+    {"id": "Publication", "group": 2},
+    {"id": "McKinsey_Forward", "group": 1},
+    {"id": "hasLevel", "group": 1},
+    {"id": "DatatypeProperty", "group": 4},
+    {"id": "ConceptShape", "group": 3},
+    {"id": "Asset_002", "group": 3},
+    {"id": "KnowledgeAsset", "group": 4},
+    {"id": "KnowledgeAssetShape", "group": 3},
+    {"id": "ProblemSolvingFramework", "group": 1},
+    {"id": "label", "group": 4},
+    {"id": "n6ee13510723d484b962f16dc24fa0331b3", "group": 3},
+    {"id": "n6ee13510723d484b962f16dc24fa0331b4", "group": 4},
+    {"id": "hasHypothesis", "group": 2},
+    {"id": "n6ee13510723d484b962f16dc24fa0331b7", "group": 4},
+    {"id": "n6ee13510723d484b962f16dc24fa0331b6", "group": 3},
+    {"id": "nil", "group": 4},
+    {"id": "n6ee13510723d484b962f16dc24fa0331b2", "group": 4},
+    {"id": "L1_MCP", "group": 1},
+    {"id": "SovereignBureau", "group": 4},
+    {"id": "certifiedBy", "group": 4},
+    {"id": "hasDOI", "group": 4},
+    {"id": "status", "group": 4},
+    {"id": "Person", "group": 4},
+    {"id": "n6ee13510723d484b962f16dc24fa0331b5", "group": 4},
+    {"id": "SovereignNode", "group": 2}
   ],
-  "links": [
-    {
-      "source": "IssueTreeShape",
-      "target": "NodeShape",
-      "label": "type"
-    },
-    {
-      "source": "L2_SemanticWeb",
-      "target": "PracticeArea",
-      "label": "type"
-    },
-    {
-      "source": "CognitiveSystems",
-      "target": "Domain",
-      "label": "type"
-    },
-    {
-      "source": "belongsTo",
-      "target": "PracticeArea",
-      "label": "range"
-    },
-    {
-      "source": "L3_AgenticSystems",
-      "target": "PracticeArea",
-      "label": "type"
-    },
-    {
-      "source": "padi-ontology-kernel",
-      "target": "nb3b64f7491544d819f01c131db77f072b1",
-      "label": "serviceEndpoints"
-    },
-    {
-      "source": "SovereignRegistry_2026",
-      "target": "Registry",
-      "label": "type"
-    },
-    {
-      "source": "authoredBy",
-      "target": "EpistemicAsset",
-      "label": "range"
-    },
-    {
-      "source": "LLMSystems",
-      "target": "Concept",
-      "label": "type"
-    },
-    {
-      "source": "n6ee13510723d484b962f16dc24fa0331b1",
-      "target": "string",
-      "label": "datatype"
-    },
-    {
-      "source": "EpistemicAsset",
-      "target": "Class",
-      "label": "type"
-    },
-    {
-      "source": "nairobi-01",
-      "target": "N620e89eb22f24dac985f255b14dd16bf",
-      "label": "author"
-    },
-    {
-      "source": "foreign_asset.ttl",
-      "target": "SovereignAsset",
-      "label": "type"
-    },
-    {
-      "source": "authoredBy",
-      "target": "ObjectProperty",
-      "label": "type"
-    },
-    {
-      "source": "IssueTreeShape",
-      "target": "n9001d6a327424f96ab6180c999e906e2b1",
-      "label": "property"
-    },
-    {
-      "source": "n3f105ab423404de4bde7ba2ea9ae9b36b1",
-      "target": "string",
-      "label": "datatype"
-    },
-    {
-      "source": "authoredBy",
-      "target": "Publication",
-      "label": "domain"
-    },
-    {
-      "source": "McKinsey_Forward",
-      "target": "EpistemicAsset",
-      "label": "type"
-    },
-    {
-      "source": "hasLevel",
-      "target": "DatatypeProperty",
-      "label": "type"
-    },
-    {
-      "source": "ConceptShape",
-      "target": "Concept",
-      "label": "targetClass"
-    },
-    {
-      "source": "Asset_002",
-      "target": "KnowledgeAsset",
-      "label": "type"
-    },
-    {
-      "source": "KnowledgeAssetShape",
-      "target": "n6ee13510723d484b962f16dc24fa0331b1",
-      "label": "property"
-    },
-    {
-      "source": "belongsTo",
-      "target": "EpistemicAsset",
-      "label": "domain"
-    },
-    {
-      "source": "ProblemSolvingFramework",
-      "target": "EpistemicAsset",
-      "label": "type"
-    },
-    {
-      "source": "PracticeArea",
-      "target": "Class",
-      "label": "type"
-    },
-    {
-      "source": "KnowledgeAssetShape",
-      "target": "KnowledgeAsset",
-      "label": "targetClass"
-    },
-    {
-      "source": "n3f105ab423404de4bde7ba2ea9ae9b36b1",
-      "target": "label",
-      "label": "path"
-    },
-    {
-      "source": "ConceptShape",
-      "target": "NodeShape",
-      "label": "type"
-    },
-    {
-      "source": "n6ee13510723d484b962f16dc24fa0331b3",
-      "target": "n6ee13510723d484b962f16dc24fa0331b4",
-      "label": "rest"
-    },
-    {
-      "source": "n9001d6a327424f96ab6180c999e906e2b1",
-      "target": "hasHypothesis",
-      "label": "path"
-    },
-    {
-      "source": "KnowledgeAssetShape",
-      "target": "n6ee13510723d484b962f16dc24fa0331b7",
-      "label": "property"
-    },
-    {
-      "source": "KnowledgeAssetShape",
-      "target": "NodeShape",
-      "label": "type"
-    },
-    {
-      "source": "LLMSystems",
-      "target": "CognitiveSystems",
-      "label": "belongsTo"
-    },
-    {
-      "source": "n6ee13510723d484b962f16dc24fa0331b6",
-      "target": "nil",
-      "label": "rest"
-    },
-    {
-      "source": "KnowledgeAssetShape",
-      "target": "n6ee13510723d484b962f16dc24fa0331b2",
-      "label": "property"
-    },
-    {
-      "source": "IssueTreeShape",
-      "target": "ProblemSolvingFramework",
-      "label": "targetClass"
-    },
-    {
-      "source": "L1_MCP",
-      "target": "PracticeArea",
-      "label": "type"
-    },
-    {
-      "source": "padi-ontology-kernel",
-      "target": "SovereignBureau",
-      "label": "type"
-    },
-    {
-      "source": "n6ee13510723d484b962f16dc24fa0331b7",
-      "target": "certifiedBy",
-      "label": "path"
-    },
-    {
-      "source": "n6ee13510723d484b962f16dc24fa0331b1",
-      "target": "hasDOI",
-      "label": "path"
-    },
-    {
-      "source": "ProblemSolvingFramework",
-      "target": "McKinsey_Forward",
-      "label": "belongsTo"
-    },
-    {
-      "source": "n6ee13510723d484b962f16dc24fa0331b2",
-      "target": "status",
-      "label": "path"
-    },
-    {
-      "source": "belongsTo",
-      "target": "ObjectProperty",
-      "label": "type"
-    },
-    {
-      "source": "n6ee13510723d484b962f16dc24fa0331b2",
-      "target": "n6ee13510723d484b962f16dc24fa0331b3",
-      "label": "in"
-    },
-    {
-      "source": "SovereignRegistry_2026",
-      "target": "Asset_002",
-      "label": "contains"
-    },
-    {
-      "source": "McKinsey_Forward",
-      "target": "L1_MCP",
-      "label": "belongsTo"
-    },
-    {
-      "source": "ConceptShape",
-      "target": "n3f105ab423404de4bde7ba2ea9ae9b36b1",
-      "label": "property"
-    },
-    {
-      "source": "N620e89eb22f24dac985f255b14dd16bf",
-      "target": "Person",
-      "label": "type"
-    },
-    {
-      "source": "Publication",
-      "target": "Class",
-      "label": "type"
-    },
-    {
-      "source": "hasLevel",
-      "target": "PracticeArea",
-      "label": "domain"
-    },
-    {
-      "source": "n6ee13510723d484b962f16dc24fa0331b4",
-      "target": "n6ee13510723d484b962f16dc24fa0331b5",
-      "label": "rest"
-    },
-    {
-      "source": "nairobi-01",
-      "target": "SovereignNode",
-      "label": "type"
-    },
-    {
-      "source": "n6ee13510723d484b962f16dc24fa0331b5",
-      "target": "n6ee13510723d484b962f16dc24fa0331b6",
-      "label": "rest"
-    }
-  ]
+  "links": [...] 
 }
