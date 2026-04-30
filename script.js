@@ -58,3 +58,18 @@ d3.json("metadata.json").then(data => {
             .attr("cy", d => d.y = Math.max(25, Math.min(height - 25, d.y)));
     });
 });
+
+// Metadata Sidebar Handler for PADI Sovereign Bureau
+function updateSidebar(d) {
+    const sidebar = document.getElementById('metadata-sidebar');
+    if (!sidebar) return;
+    
+    sidebar.style.display = 'block';
+    document.getElementById('meta-name').innerText = d.name || "Unnamed Node";
+    document.getElementById('meta-type').innerText = d.type || "N/A";
+    document.getElementById('meta-iri').innerText = d.id || "N/A";
+    document.getElementById('meta-desc').innerText = d.description || "No description available in kernel.";
+}
+
+// Ensure this is called within your D3 node click listener:
+// node.on("click", (event, d) => updateSidebar(d));
