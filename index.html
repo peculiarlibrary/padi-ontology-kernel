@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PADI Sovereign Bureau | Visualizer</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; background: #0d1117; font-family: sans-serif; }
+        #overlay {
+            position: absolute; top: 20px; left: 20px; color: #58a6ff;
+            pointer-events: none; z-index: 10;
+        }
+        svg { width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="overlay">
+        <h1>PADI Sovereign Bureau</h1>
+        <p>Node: Nairobi-01 | Architect: The Peculiar Librarian</p>
+    </div>
+    <svg id="visualizer"></svg>
+    <script src="app.js"></script>
+</body>
+</html>
