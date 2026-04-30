@@ -3,7 +3,7 @@ import json
 import os
 
 g = rdflib.Graph()
-target_dirs = ['ontology', 'data', 'epistemics', 'constraints']
+target_dirs = ["ontology", "epistemics", "constraints"]
 for t_dir in target_dirs:
     if os.path.exists(t_dir):
         for root, _, files in os.walk(t_dir):

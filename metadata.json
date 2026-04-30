@@ -71,37 +71,9 @@
             "group": 1
         },
         {
-            "id": "https://peculiarlibrary.github.io/padi-ontology-kernel/data/foreign_asset.ttl",
-            "name": "foreign_asset.ttl",
-            "type": "SovereignAsset",
-            "description": "No formal description in kernel.",
-            "group": 1
-        },
-        {
-            "id": "https://padi.io/ontology/McKinsey_Forward",
-            "name": "McKinsey_Forward",
-            "type": "EpistemicAsset",
-            "description": "No formal description in kernel.",
-            "group": 1
-        },
-        {
             "id": "https://padi.io/ontology/mckinsey/ProblemSolvingFramework",
             "name": "ProblemSolvingFramework",
             "type": "EpistemicAsset",
-            "description": "No formal description in kernel.",
-            "group": 1
-        },
-        {
-            "id": "https://padi.io/ontology/SovereignRegistry_2026",
-            "name": "SovereignRegistry_2026",
-            "type": "Registry",
-            "description": "No formal description in kernel.",
-            "group": 1
-        },
-        {
-            "id": "https://padi.io/ontology/Asset_002",
-            "name": "Asset_002",
-            "type": "KnowledgeAsset",
             "description": "No formal description in kernel.",
             "group": 1
         },
@@ -122,13 +94,33 @@
     ],
     "links": [
         {
-            "source": "https://padi.io/ontology/KnowledgeAssetShape",
-            "target": "https://padi.io/ontology/KnowledgeAsset",
+            "source": "https://padi.io/ontology/mckinsey/IssueTreeShape",
+            "target": "https://padi.io/ontology/mckinsey/ProblemSolvingFramework",
             "value": 1
         },
         {
-            "source": "https://padi.io/ontology/PracticeArea",
-            "target": "http://www.w3.org/2002/07/owl#Class",
+            "source": "https://padi.io/ontology/mckinsey/IssueTreeShape",
+            "target": "http://www.w3.org/ns/shacl#NodeShape",
+            "value": 1
+        },
+        {
+            "source": "https://padi.io/ontology/L2_SemanticWeb",
+            "target": "https://padi.io/ontology/PracticeArea",
+            "value": 1
+        },
+        {
+            "source": "https://padi.io/ontology/L1_MCP",
+            "target": "https://padi.io/ontology/PracticeArea",
+            "value": 1
+        },
+        {
+            "source": "nc7381bb83a71478183f51dca8d5c3045b7",
+            "target": "https://padi.io/ontology/certifiedBy",
+            "value": 1
+        },
+        {
+            "source": "https://padi.io/ontology/L3_AgenticSystems",
+            "target": "https://padi.io/ontology/PracticeArea",
             "value": 1
         },
         {
@@ -142,83 +134,8 @@
             "value": 1
         },
         {
-            "source": "https://padi.io/ontology/Asset_002",
-            "target": "https://padi.io/ontology/KnowledgeAsset",
-            "value": 1
-        },
-        {
-            "source": "https://padi.io/ontology/L2_SemanticWeb",
-            "target": "https://padi.io/ontology/PracticeArea",
-            "value": 1
-        },
-        {
-            "source": "https://padi.io/ontology/KnowledgeAssetShape",
-            "target": "http://www.w3.org/ns/shacl#NodeShape",
-            "value": 1
-        },
-        {
-            "source": "https://padi.io/ontology/belongsTo",
-            "target": "https://padi.io/ontology/PracticeArea",
-            "value": 1
-        },
-        {
-            "source": "https://padi.io/ontology/authoredBy",
-            "target": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "value": 1
-        },
-        {
-            "source": "https://padi.io/ontology/authoredBy",
-            "target": "https://padi.io/ontology/EpistemicAsset",
-            "value": 1
-        },
-        {
-            "source": "ne73c0b05906847af8c853596fcfb48c1b2",
-            "target": "https://padi.io/ontology/status",
-            "value": 1
-        },
-        {
-            "source": "ne73c0b05906847af8c853596fcfb48c1b1",
-            "target": "https://padi.io/ontology/hasDOI",
-            "value": 1
-        },
-        {
-            "source": "https://padi.io/ontology/L1_MCP",
-            "target": "https://padi.io/ontology/PracticeArea",
-            "value": 1
-        },
-        {
-            "source": "https://padi.io/ontology/mckinsey/ProblemSolvingFramework",
-            "target": "https://padi.io/ontology/EpistemicAsset",
-            "value": 1
-        },
-        {
-            "source": "https://padi.io/ontology/mckinsey/IssueTreeShape",
-            "target": "https://padi.io/ontology/mckinsey/ProblemSolvingFramework",
-            "value": 1
-        },
-        {
-            "source": "https://padi.io/ontology/SovereignRegistry_2026",
-            "target": "https://padi.io/ontology/Asset_002",
-            "value": 1
-        },
-        {
-            "source": "ne73c0b05906847af8c853596fcfb48c1b7",
-            "target": "https://padi.io/ontology/certifiedBy",
-            "value": 1
-        },
-        {
-            "source": "https://padi.io/ontology/SovereignRegistry_2026",
-            "target": "https://padi.io/ontology/Registry",
-            "value": 1
-        },
-        {
-            "source": "ne73c0b05906847af8c853596fcfb48c1b6",
-            "target": "http://www.w3.org/1999/02/22-rdf-syntax-ns#nil",
-            "value": 1
-        },
-        {
-            "source": "https://padi.io/ontology/mckinsey/IssueTreeShape",
-            "target": "http://www.w3.org/ns/shacl#NodeShape",
+            "source": "https://padi.io/ontology/Publication",
+            "target": "http://www.w3.org/2002/07/owl#Class",
             "value": 1
         },
         {
@@ -227,33 +144,43 @@
             "value": 1
         },
         {
-            "source": "https://padi.io/ontology/McKinsey_Forward",
-            "target": "https://padi.io/ontology/EpistemicAsset",
-            "value": 1
-        },
-        {
-            "source": "ne73c0b05906847af8c853596fcfb48c1b1",
-            "target": "http://www.w3.org/2001/XMLSchema#string",
-            "value": 1
-        },
-        {
             "source": "https://padi.io/ontology/authoredBy",
             "target": "https://padi.io/ontology/Publication",
             "value": 1
         },
         {
-            "source": "https://padi.io/ontology/L3_AgenticSystems",
-            "target": "https://padi.io/ontology/PracticeArea",
+            "source": "nc7381bb83a71478183f51dca8d5c3045b2",
+            "target": "https://padi.io/ontology/status",
             "value": 1
         },
         {
-            "source": "https://padi.io/ontology/Publication",
+            "source": "https://padi.io/ontology/KnowledgeAssetShape",
+            "target": "http://www.w3.org/ns/shacl#NodeShape",
+            "value": 1
+        },
+        {
+            "source": "https://padi.io/ontology/PracticeArea",
             "target": "http://www.w3.org/2002/07/owl#Class",
             "value": 1
         },
         {
-            "source": "https://padi.io/ontology/McKinsey_Forward",
-            "target": "https://padi.io/ontology/L1_MCP",
+            "source": "https://padi.io/ontology/hasLevel",
+            "target": "https://padi.io/ontology/PracticeArea",
+            "value": 1
+        },
+        {
+            "source": "nc7381bb83a71478183f51dca8d5c3045b1",
+            "target": "http://www.w3.org/2001/XMLSchema#string",
+            "value": 1
+        },
+        {
+            "source": "https://padi.io/ontology/belongsTo",
+            "target": "https://padi.io/ontology/PracticeArea",
+            "value": 1
+        },
+        {
+            "source": "https://padi.io/ontology/authoredBy",
+            "target": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "value": 1
         },
         {
@@ -262,13 +189,28 @@
             "value": 1
         },
         {
-            "source": "https://peculiarlibrary.github.io/padi-ontology-kernel/data/foreign_asset.ttl",
-            "target": "https://padi.io/ontology/SovereignAsset",
+            "source": "https://padi.io/ontology/KnowledgeAssetShape",
+            "target": "https://padi.io/ontology/KnowledgeAsset",
             "value": 1
         },
         {
-            "source": "n375df994da944f538c0fd5f5dfd1a511b1",
+            "source": "https://padi.io/ontology/authoredBy",
+            "target": "https://padi.io/ontology/EpistemicAsset",
+            "value": 1
+        },
+        {
+            "source": "ne5bc2fa51eda4b2dae29eaca68836cb9b1",
             "target": "https://padi.io/ontology/hasHypothesis",
+            "value": 1
+        },
+        {
+            "source": "nc7381bb83a71478183f51dca8d5c3045b6",
+            "target": "http://www.w3.org/1999/02/22-rdf-syntax-ns#nil",
+            "value": 1
+        },
+        {
+            "source": "https://padi.io/ontology/mckinsey/ProblemSolvingFramework",
+            "target": "https://padi.io/ontology/EpistemicAsset",
             "value": 1
         },
         {
@@ -277,13 +219,8 @@
             "value": 1
         },
         {
-            "source": "https://padi.io/ontology/ProblemSolvingFramework",
-            "target": "https://padi.io/ontology/McKinsey_Forward",
-            "value": 1
-        },
-        {
-            "source": "https://padi.io/ontology/hasLevel",
-            "target": "https://padi.io/ontology/PracticeArea",
+            "source": "nc7381bb83a71478183f51dca8d5c3045b1",
+            "target": "https://padi.io/ontology/hasDOI",
             "value": 1
         }
     ]
