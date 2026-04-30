@@ -2,7 +2,7 @@
   "bureau_name": "PADI Sovereign Bureau",
   "governing_architect": "Samuel Muriithi Gitandu, B.S.",
   "kernel_version": "4.1.0",
-  "last_updated": "2026-04-30T09:31:30Z",
+  "last_updated": "2026-04-30T11:23:32Z",
   "zenodo_doi": "10.5281/zenodo.18894084",
   "assets": [
     {
@@ -16,7 +16,7 @@
       "name": "foreign_asset.ttl",
       "type": "data",
       "path": "data/foreign_asset.ttl",
-      "sha256": "da01ab01d4e88690cee3d642033b596ed0b63b672b627e563ae904f7472f5df0",
+      "sha256": "cf35fd7244d0c34cea88135970f5fb684f8ae248135e1d259f7a03a4c8e8e5ea",
       "version": "1.0.0"
     },
     {
@@ -44,21 +44,21 @@
       "name": "zenodo_v2_standard.ttl",
       "type": "data",
       "path": "data/zenodo_v2_standard.ttl",
-      "sha256": "7ed5e9bf5d0d93a973c93f08093cc2de6b329c3107da14790e92e8cd24edddc7",
+      "sha256": "3918cc56ada2e85164c6d4a5b137aa01b5f69801574f2c5cb167c48d0fe87f1b",
       "version": "1.0.0"
     },
     {
       "name": "registry.ttl",
       "type": "data",
       "path": "data/registry.ttl",
-      "sha256": "12919f5e1889c77501fbf30eb2b4c5a48bdeaa2c982a54f0ad7109d22d4ea799",
+      "sha256": "7a077fbccb0b6109bf701dc5c71cd662fef283b0cb5fc04e811e95485d6863a0",
       "version": "1.0.0"
     },
     {
       "name": "identity-manifest.ttl",
       "type": "ontology",
       "path": "ontology/identity-manifest.ttl",
-      "sha256": "ad922fd96bd87a67ee75caead1f6615e04341bd0bc002fe7797f1bcb05dc2618",
+      "sha256": "9167b56af4aed355ae35f4cbb9a48b9943dbec5af968fff0b555c4dbc3fcb0f0",
       "version": "1.0.0"
     },
     {
@@ -107,7 +107,7 @@
       "name": "padi_core_shapes.ttl",
       "type": "constraints",
       "path": "constraints/padi_core_shapes.ttl",
-      "sha256": "eeb4db28cf4762bb6c68bef390582ab948688ac7fe4f8894757746766a20f3d4",
+      "sha256": "18fa0d36ec4da2f153760ff2e77bac173849434ed4aa88ac6f649f3daa72ae20",
       "version": "1.0.0"
     },
     {
