@@ -1,60 +1,19 @@
-@prefix padi: <https://peculiarlibrary.github.io/padi-ontology-kernel#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <https://padi.io/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-### --- PADI MASTER TAXONOMY V1.2 --- ###
+:PracticeArea a owl:Class ;
+    rdfs:label "Practice Area" .
 
-padi:PracticeArea a owl:Class ;
-    rdfs:label "Practice Area" ;
-    rdfs:comment "A top-level domain defining the scope of the Sovereign Bureau." .
-
-# --- L1: PRIMARY DOMAINS --- #
-
-padi:InformationScience a padi:PracticeArea ;
-    rdfs:label "Information Science" .
-
-padi:DigitalCommunications a padi:PracticeArea ;
-    rdfs:label "Digital Communications" .
-
-padi:SystemsArchitecture a padi:PracticeArea ;
-    rdfs:label "Systems Architecture" ;
-    rdfs:comment "The design and governance of complex information systems." .
-
-padi:ResearchAnalysis a padi:PracticeArea ;
-    rdfs:label "Research Analysis" ;
-    rdfs:comment "Systematic investigation and evaluation of information sources." .
-
-# --- L2: DEPTH NODES & SPECIALIZATIONS --- #
-
-padi:Librarianship a padi:InformationScience ;
-    rdfs:label "Librarianship" ;
-    padi:hasDepth "L2"^^xsd:string .
-
-padi:OntologyEngineering a padi:InformationScience ;
-    rdfs:label "Ontology Engineering" ;
-    padi:hasDepth "L2"^^xsd:string .
-
-padi:AgenticOrchestration a padi:SystemsArchitecture ;
-    rdfs:label "Agentic Orchestration" ;
-    padi:hasDepth "L2"^^xsd:string .
-
-padi:StructuredAnalysis a padi:ResearchAnalysis ;
-    rdfs:label "Structured Analysis" ;
-    padi:hasDepth "L2"^^xsd:string .
-
-# --- Level 1: Model Context Protocol (MCP) ---
-:ModelContextProtocol a :PracticeArea ;
+:L1_MCP a :PracticeArea ;
     :hasLevel "L1" ;
-    :description "Standards for agentic interfacing and semantic context delivery." .
+    rdfs:label "Model Context Protocol" .
 
-# --- Level 2: MCP Specializations ---
-:AgenticDiscovery a :Specialization ;
+:L2_SemanticWeb a :PracticeArea ;
     :hasLevel "L2" ;
-    :partOf :ModelContextProtocol ;
-    :description "Autonomous identification of Bureau assets by AI agents." .
+    rdfs:label "Semantic Web & Knowledge Graphs" .
 
-:SemanticContext a :Specialization ;
-    :hasLevel "L2" ;
-    :partOf :ModelContextProtocol ;
-    :description "The delivery of structured metadata to Large Language Models." .
+:L3_AgenticSystems a :PracticeArea ;
+    :hasLevel "L3" ;
+    rdfs:label "Agentic Information Science" .

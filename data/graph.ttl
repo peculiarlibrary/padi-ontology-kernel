@@ -1,8 +1,10 @@
-@prefix ns1: <https://padi-standard.org/ns/core#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix : <https://padi.io/ontology/> .
 
-<http://example.org/node/CognitiveSystems>
-    ns1:nodeName "Cognitive Systems" ;
-    ns1:depthIndex "4" ;
-    ns1:hasJurisdiction "GLOBAL" ;
-    ns1:lastValidated "1777197959" .
+# --- Harmonized Connections ---
+# We link McKinsey to the L1 Practice Area defined in the Taxonomy
+:McKinsey_Forward a :EpistemicAsset ;
+    :belongsTo :L1_MCP ;
+    :status "In-Progress" .
+
+# We link the Framework to the McKinsey program
+:ProblemSolvingFramework :belongsTo :McKinsey_Forward .
