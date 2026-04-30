@@ -1,6 +1,7 @@
 import rdflib
 import os
 from pathlib import Path
+from urllib.parse import urlparse
 
 g = rdflib.Graph()
 PADI = rdflib.Namespace('https://padi.io/ontology/')
@@ -17,6 +18,11 @@ for path in Path('.').rglob('*.ttl'):
 
 def get_local_name(uri):
     return str(uri).split('/')[-1].split('#')[-1]
+
+def is_padi_namespace_uri(uri):
+    parsed = urlparse(str(uri))
+    host = (parsed.hostname or "").lower()
+    return host == "padi.io" or host.endswith(".padi.io")
 
 print(f"\n{'='*40}")
 print(f"   PADI BUREAU INVENTORY (MINGW64)")
@@ -36,7 +42,7 @@ for prop in sorted(set(g.subjects(rdflib.RDF.type, rdflib.OWL.ObjectProperty))):
 print("\n[DATA] DEFINED INSTANCES:")
 # Finding subjects that have a type within the PADI namespace
 for s, p, o in g.triples((None, rdflib.RDF.type, None)):
-    if 'padi.io' in str(o):
+    if is_padi_namespace_uri(o):
         print(f"  - {get_local_name(s)} (Type: {get_local_name(o)})")
 
 print(f"\n{'='*40}")
