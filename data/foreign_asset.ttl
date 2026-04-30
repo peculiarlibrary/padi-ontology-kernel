@@ -1,4 +1,4 @@
-@prefix padi: <https://padi.standards.org/schema#> .
+@prefix padi: <https://padi.io/ontology/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
 <https://peculiarlibrary.github.io/padi-ontology-kernel/data/foreign_asset.ttl>

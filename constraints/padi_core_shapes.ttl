@@ -4,7 +4,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix padi: <http://padi.internal/> .
+@prefix padi: <https://padi.io/ontology/> .
 
 padi:KnowledgeAssetShape
     a sh:NodeShape ;

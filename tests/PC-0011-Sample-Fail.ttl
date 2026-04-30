@@ -1,4 +1,4 @@
-@prefix padi: <http://padi.internal/> .
+@prefix padi: <https://padi.io/ontology/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 padi:Asset_Beta
