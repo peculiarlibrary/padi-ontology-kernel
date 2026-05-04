@@ -24,7 +24,7 @@ feedparser==6.0.12
 filelock==3.29.0
 frozenlist==1.8.0
 gitdb==4.0.12
-GitPython==3.1.47
+GitPython==3.1.49
 googleapis-common-protos==1.74.0
 greenlet==3.4.0
 grpcio==1.80.0
