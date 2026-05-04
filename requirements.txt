@@ -55,7 +55,7 @@ platformdirs==4.9.6
 prettytable==2.5.0
 propcache==0.4.1
 protobuf==5.29.6
-pyarrow==23.0.1
+pyarrow==24.0.0
 pycparser==3.0
 pycryptodome==3.23.0
 pydantic==2.13.1
