@@ -69,7 +69,7 @@ python-discovery==1.2.2
 python-dotenv==1.2.2
 python-telegram-bot==20.7
 PyYAML==6.0.3
-rdflib==6.3.2
+rdflib==7.6.0
 rdflib-sqlalchemy==0.5.4
 referencing==0.37.0
 requests==2.33.1
